@@ -24,6 +24,7 @@ public class Hero : Unit, IVisitable
         UpdateVisuals();
 
         // TODO popup levelup screen to choose powerup
+        LevelUpScreen.Show_Static(this);
     }
 
     protected override void OnHealthChanged()
