@@ -32,7 +32,10 @@ public class Levels
         currentExperience = currentExperience - experienceToNextLevel;
         if (level >= levelScalingStartingLevel) experienceToNextLevel = baseExperienceRequiredToLevel + experienceRequirementAddedPerLevel * (level - levelScalingStartingLevel + 1);
         OnLevelUp.Invoke(level);
+    }
 
+    public void CheckExperience()
+    {
         if (currentExperience >= experienceToNextLevel) LevelUp();
     }
 
