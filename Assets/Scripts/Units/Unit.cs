@@ -12,9 +12,9 @@ public abstract class Unit : Entity, IDamageable
         Stats = new Stats(new StatsMediator(), baseStats);
         Health = new Health(baseStats, Stats);
 
-        Stats.Mediator.OnModifiersChanged += OnModifiersChanged;
+        Stats.Mediator.OnModifierChanged += OnModifiersChanged;
         Health.OnHealthChanged += OnHealthChanged;
-        OnModifiersChanged();
+        OnModifiersChanged(this, new ModifierChangedArgs(null, default));
 
         base.Init();
     }
@@ -24,9 +24,23 @@ public abstract class Unit : Entity, IDamageable
 
     }
 
-    protected virtual void OnModifiersChanged()
+    protected virtual void OnModifiersChanged(object sender, ModifierChangedArgs args)
     {
-        Health.UpdateHp();
+        if (args.modifier == null) return;
+
+        if (args.modifier.config.type == StatType.MaxHp)
+        {
+            if (args.change == ModifierChangedArgs.Change.Added)
+            {
+                Health.AddHp(args.modifier.config.value);
+            }
+            else if (args.change == ModifierChangedArgs.Change.Modified && args.modifier.config.stackable)
+            {
+                Health.AddHp(args.modifier.config.value);
+            }
+
+            Health.UpdateHp();
+        }
     }
 
     public virtual void Update()

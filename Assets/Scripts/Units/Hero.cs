@@ -23,8 +23,7 @@ public class Hero : Unit, IVisitable
         Health.SetHpToMax();
         UpdateVisuals();
 
-        // TODO popup levelup screen to choose powerup
-        LevelUpScreen.Show_Static(this, () => Levels.CheckExperience());
+        LevelUpScreen.Show_Static(this, () => { Levels.CheckExperience(); UpdateVisuals(); });
     }
 
     protected override void OnHealthChanged()
@@ -33,9 +32,9 @@ public class Hero : Unit, IVisitable
         UpdateVisuals();
     }
 
-    protected override void OnModifiersChanged()
+    protected override void OnModifiersChanged(object sender, ModifierChangedArgs args)
     {
-        base.OnModifiersChanged();
+        base.OnModifiersChanged(sender, args);
         UpdateVisuals();
     }
 

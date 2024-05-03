@@ -3,7 +3,6 @@ using UnityEngine;
 
 public class Health
 {
-    readonly BaseStats baseStats;
     readonly Stats stats;
 
     public Action OnHealthChanged = delegate { };
@@ -14,10 +13,7 @@ public class Health
 
     public Health(BaseStats baseStats, Stats stats)
     {
-        this.baseStats = baseStats;
         this.stats = stats;
-
-        Debug.Log(stats);
 
         SetHpToMax();
         //SetTemporaryHpToMax();

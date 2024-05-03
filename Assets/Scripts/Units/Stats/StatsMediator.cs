@@ -5,7 +5,7 @@ public class StatsMediator
 {
     readonly List<StatModifier> modifiers = new List<StatModifier>();
 
-    public event Action OnModifiersChanged = delegate { };
+    public event EventHandler<ModifierChangedArgs> OnModifierChanged;
     public event EventHandler<Query> Queries;
     public void PerformQuery(object sender, Query query) => Queries?.Invoke(sender, query);
 
@@ -14,13 +14,13 @@ public class StatsMediator
         modifiers.Add(modifier);
         Queries += modifier.Handle;
         ArrangeModifiers();
-        ModifiersChanged();
+        ModifiersChanged(this, new ModifierChangedArgs(modifier, ModifierChangedArgs.Change.Added));
 
         modifier.OnDispose += _ =>
         {
             modifiers.Remove(modifier);
             Queries -= modifier.Handle;
-            ModifiersChanged();
+            ModifiersChanged(this, new ModifierChangedArgs(modifier, ModifierChangedArgs.Change.Removed));
         };
     }
 
@@ -35,7 +35,7 @@ public class StatsMediator
 
         foreach (var mod in modifiers)
         {
-            if (mod.name == name)
+            if (mod.config.name == name)
             {
                 modifier = mod;
                 break;
@@ -46,7 +46,7 @@ public class StatsMediator
 
         if (modifier.Modify())
         {
-            ModifiersChanged();
+            ModifiersChanged(this, new ModifierChangedArgs(modifier, ModifierChangedArgs.Change.Modified));
             return true;
         }
         else
@@ -55,9 +55,9 @@ public class StatsMediator
         }
     }
 
-    private void ModifiersChanged()
+    private void ModifiersChanged(object sender, ModifierChangedArgs args)
     {
-        OnModifiersChanged.Invoke();
+        OnModifierChanged.Invoke(sender, args);
     }
 
     private void ArrangeModifiers()
@@ -65,7 +65,7 @@ public class StatsMediator
         // Moves all multiplier modifiers to be calculated last
         foreach (var modifier in modifiers)
         {
-            if (modifier.operatorType == StatModifier.OperatorType.Multiply)
+            if (modifier.config.operatorType == StatModifier.OperatorType.Multiply)
             {
                 Queries -= modifier.Handle;
                 Queries += modifier.Handle;
@@ -106,4 +106,15 @@ public class Query
     }
 }
 
+public class ModifierChangedArgs : EventArgs
+{
+    public enum Change { Added, Removed, Modified }
+    public readonly StatModifier modifier;
+    public readonly Change change;
 
+    public ModifierChangedArgs(StatModifier modifier, Change change)
+    {
+        this.modifier = modifier;
+        this.change = change;
+    }
+}

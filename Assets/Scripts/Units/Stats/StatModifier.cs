@@ -5,19 +5,19 @@ public class BasicStatModifier : StatModifier
 {
     readonly Func<float, float> operation;
 
-    public BasicStatModifier(BaseStatModifier baseModifier) : base(baseModifier, false)
+    public BasicStatModifier(StatModifierConfig modifierConfig) : base(modifierConfig)
     {
-        operation = operatorType switch
+        operation = modifierConfig.operatorType switch
         {
-            OperatorType.Add => (v) => v + value,
-            OperatorType.Multiply => (v) => v * value,
+            OperatorType.Add => (v) => v + currentValue,
+            OperatorType.Multiply => (v) => v * currentValue,
             _ => throw new ArgumentOutOfRangeException()
         };
     }
 
     public override void Handle(object sender, Query query)
     {
-        if (query.StatType == type)
+        if (query.StatType == config.type)
         {
             query.Value = operation(query.Value);
         }
@@ -28,7 +28,7 @@ public class StackableStatModifier : StatModifier
 {
     // Maybe add different stacking methods
 
-    public StackableStatModifier(BaseStatModifier baseModifier) : base(baseModifier, true)
+    public StackableStatModifier(StatModifierConfig modifierConfig) : base(modifierConfig)
     {
 
     }
@@ -37,16 +37,16 @@ public class StackableStatModifier : StatModifier
     {
         float valueAfterOperation;
 
-        switch (operatorType)
+        switch (config.operatorType)
         {
             case OperatorType.Add:
-                valueAfterOperation = v + value;
+                valueAfterOperation = v + currentValue;
                 break;
             case OperatorType.Multiply:
-                valueAfterOperation = v * value;
+                valueAfterOperation = v * currentValue;
                 break;
             default:
-                valueAfterOperation = v + value;
+                valueAfterOperation = v + currentValue;
                 break;
         }
 
@@ -55,7 +55,7 @@ public class StackableStatModifier : StatModifier
 
     public override void Handle(object sender, Query query)
     {
-        if (query.StatType == type)
+        if (query.StatType == config.type)
         {
             query.Value = Operation(query.Value);
         }
@@ -64,22 +64,17 @@ public class StackableStatModifier : StatModifier
 
 public abstract class StatModifier : IDisposable
 {
-    public enum OperatorType { Add, Multiply }
+    public enum OperatorType {
+        Add,
+        Multiply
+    }
 
-    public readonly float baseValue;
-    public float value { get; private set; }
+    public readonly StatModifierConfig config;
 
-    public readonly string name;
-    protected readonly StatType type;
-    public readonly OperatorType operatorType;
-
-    readonly bool Stackable;
-    readonly bool Refreshable;
-    readonly bool timeStackable;
+    public float currentValue { get; private set; }
 
     private float timerEndTime;
-    private float baseDuration;
-    private float duration;
+    private float currentDuration;
     public float timeLeft => timerEndTime - Time.time;
 
     public bool MarkedForRemoval { get; private set; }
@@ -88,22 +83,16 @@ public abstract class StatModifier : IDisposable
 
     public abstract void Handle(object sender, Query query);
 
-    protected StatModifier(BaseStatModifier baseModifier, bool stackable)
+    protected StatModifier(StatModifierConfig modifierConfig)
     {
-        this.name = baseModifier.name;
-        this.type = baseModifier.type;
-        this.operatorType = baseModifier.operatorType;
-        this.baseValue = baseModifier.value;
-        this.value = baseValue;
-        this.baseDuration = baseModifier.duration;
-        this.duration = baseDuration;
-        this.Stackable = stackable;
-        this.Refreshable = baseModifier.refreshable;
-        this.timeStackable = baseModifier.timeStackable;
+        config = modifierConfig;
 
-        if (baseModifier.duration > 0)
+        currentValue = config.value;
+        currentDuration = config.duration;
+
+        if (config.duration > 0)
         {
-            timerEndTime = Time.time + duration;
+            timerEndTime = Time.time + currentDuration;
         }
     }
 
@@ -114,19 +103,19 @@ public abstract class StatModifier : IDisposable
     {
         bool modified = false;
 
-        if (Refreshable)
+        if (config.refreshable)
         {
             ResetTimer();
             modified = true;
         }
-        if (Stackable)
+        if (config.stackable)
         {
             Stack();
             modified = true;
         }
-        if (timeStackable)
+        if (config.timeStackable)
         {
-            AddTime(baseDuration);
+            AddTime(config.duration);
             modified = true;
         }
 
@@ -136,16 +125,16 @@ public abstract class StatModifier : IDisposable
 
     protected virtual void Stack()
     {
-        value += baseValue;
+        currentValue += config.value;
     }
     protected virtual void AddTime(float amount)
     {
         timerEndTime += amount;
-        duration = baseDuration + amount;
+        currentDuration = config.duration + amount;
     }
     private void ResetTimer()
     {
-        timerEndTime = Time.time + duration;
+        timerEndTime = Time.time + currentDuration;
     }
 
     public void MarkForRemoval()
@@ -155,7 +144,7 @@ public abstract class StatModifier : IDisposable
 
     public void Update()
     {
-        if (duration <= 0) return;
+        if (currentDuration <= 0) return;
         if (timeLeft <= 0) MarkForRemoval();
     }
 
@@ -163,9 +152,41 @@ public abstract class StatModifier : IDisposable
     {
         OnDispose.Invoke(this);
     }
+}
 
-    public string GetName()
+[System.Serializable]
+public struct StatModifierConfig
+{
+    public readonly string name;
+    public readonly StatType type;
+    public readonly StatModifier.OperatorType operatorType;
+    public readonly float value;
+    public readonly float duration;
+    public readonly bool stackable;
+    public readonly bool refreshable;
+    public readonly bool timeStackable;
+
+    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value, float duration, bool stackable, bool refreshable, bool timeStackable)
     {
-        return name;
+        this.name = name;
+        this.type = type;
+        this.operatorType = operatorType;
+        this.value = value;
+        this.duration = duration;
+        this.stackable = stackable;
+        this.refreshable = refreshable;
+        this.timeStackable = timeStackable;
+    }
+
+    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value)
+    {
+        this.name = name;
+        this.type = type;
+        this.operatorType = operatorType;
+        this.value = value;
+        this.duration = 0;
+        this.stackable = true;
+        this.refreshable = false;
+        this.timeStackable = false;
     }
 }

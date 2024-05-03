@@ -2,7 +2,7 @@
 
 public class StatModifierPickup : Pickup
 {
-    [SerializeField] BaseStatModifier baseModifier;
+    [SerializeField] StatModifierPickupBase baseModifier;
 
     protected override void ApplyPickupEffect(Hero hero)
     {
@@ -10,8 +10,8 @@ public class StatModifierPickup : Pickup
         if (mediator.TryModifyModifier(baseModifier.name)) return;
 
         StatModifier modifier;
-        if (baseModifier.stackable) modifier = new StackableStatModifier(baseModifier);
-        else modifier = new BasicStatModifier(baseModifier);
+        if (baseModifier.config.stackable) modifier = new StackableStatModifier(baseModifier.config);
+        else modifier = new BasicStatModifier(baseModifier.config);
 
         mediator.AddModifier(modifier);
     }
