@@ -90,5 +90,5 @@ public class Health
     //    currentTemporaryHp = amount;
     //}
 
-    public override string ToString() => $"CurrentHp: {currentHp}";
+    public override string ToString() => $"Hp {currentHp}/{stats.MaxHp}";
 }

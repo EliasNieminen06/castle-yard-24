@@ -79,5 +79,5 @@ public class Stats
         this.baseStats = baseStats;
     }
 
-    public override string ToString() => $"MaxHp: {MaxHp}, Attack: {Attack}, Defense: {Defense}, Speed: {Math.Round(Speed, 2)}, Magnet: {Math.Round(Magnet, 2)}";
+    public override string ToString() => $"Attack: {Attack}, Defense: {Defense}, Speed: {Math.Round(Speed, 2)}, Magnet: {Math.Round(Magnet, 2)}";
 }

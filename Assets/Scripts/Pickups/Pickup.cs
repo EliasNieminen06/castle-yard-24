@@ -11,12 +11,12 @@ public abstract class Pickup : MonoBehaviour, IVisitor
         if (visitable is Hero hero)
         {
             ApplyPickupEffect(hero);
+            Destroy(gameObject);
         }
     }
 
     public void OnTriggerEnter(Collider other)
     {
         other.GetComponent<IVisitable>()?.Accept(this);
-        Destroy(gameObject);
     }
 }
