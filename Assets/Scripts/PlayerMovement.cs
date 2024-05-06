@@ -16,10 +16,13 @@ public class PlayerMovementHandler : MonoBehaviour
     {
         playerMovementVector = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         playerMovementVector.Normalize();
+       
     }
 
     private void FixedUpdate()
     {
+        
         PlayerRB.velocity = playerMovementVector * playerMovementSpeed;
+       
     }
 }
