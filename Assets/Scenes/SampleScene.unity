@@ -170,7 +170,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &457418
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -647,7 +647,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &103107104
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -849,7 +849,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &121670723
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -968,7 +968,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &141976388
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1207,7 +1207,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &183729517
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1326,7 +1326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &222220486
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1445,7 +1445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &223394021
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1564,7 +1564,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &236790301
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1802,7 +1802,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &250580545
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1921,7 +1921,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &267326989
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2479,7 +2479,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &292242470
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2598,7 +2598,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &316837834
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2717,7 +2717,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &333940392
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -2836,7 +2836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &334349308
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3698,7 +3698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &422748764
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3817,7 +3817,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &423991823
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -3936,7 +3936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &424767062
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4055,7 +4055,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &427728123
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4365,7 +4365,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &439457494
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4484,7 +4484,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &450921900
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4603,7 +4603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &464182434
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -4722,7 +4722,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &472628777
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5094,7 +5094,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &503021427
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5453,7 +5453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &532803413
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5693,7 +5693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &561024360
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -5812,7 +5812,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &573424966
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6184,7 +6184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &623461802
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6407,7 +6407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &688766006
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6801,7 +6801,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &743796820
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7003,7 +7003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &775285294
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7122,7 +7122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &776433348
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7241,7 +7241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &780838587
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7360,7 +7360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &790020705
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7650,7 +7650,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &831089601
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7769,7 +7769,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &835494417
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -7888,7 +7888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &865109873
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8115,7 +8115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &912901713
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8489,7 +8489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &958559596
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -8819,7 +8819,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &972104319
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9297,7 +9297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1064666340
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9416,7 +9416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1066055933
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9535,7 +9535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1066351448
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9654,7 +9654,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1069337261
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9773,7 +9773,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1105107917
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9892,7 +9892,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1152228290
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10011,7 +10011,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1169519200
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10249,7 +10249,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1175770154
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10368,7 +10368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1181391321
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10487,7 +10487,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1200179102
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10606,7 +10606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1208828255
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10725,7 +10725,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1232030162
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10844,7 +10844,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1241305396
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -10963,7 +10963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1242553159
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11202,7 +11202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1331525623
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11321,7 +11321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1375815342
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11708,7 +11708,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1429772444
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -11910,7 +11910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1457571759
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12029,7 +12029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1491452751
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12303,7 +12303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1563436147
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12422,7 +12422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1584459675
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12541,7 +12541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1612188665
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12660,7 +12660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1621014239
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12779,7 +12779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1645589674
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -12851,6 +12851,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1645589671}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1666052751
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1666052753}
+  - component: {fileID: 1666052752}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1666052752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666052751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e292e5605925648d59fea869c4ab670e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 1499041138}
+--- !u!4 &1666052753
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1666052751}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 18.392467, y: 14.07999, z: -8.908501}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1712052162
 GameObject:
   m_ObjectHideFlags: 0
@@ -13017,7 +13062,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1725518415
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13324,7 +13369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1753318537
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13443,7 +13488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1768732882
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13562,7 +13607,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1770926223
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -13919,7 +13964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1913660129
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14158,7 +14203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &1921755451
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14497,7 +14542,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 123, y: 42.75}
   m_SizeDelta: {x: 350, y: 250}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2001102907
@@ -14827,7 +14872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &2100177185
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -14899,125 +14944,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2100177182}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &2112407292
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2112407293}
-  - component: {fileID: 2112407297}
-  - component: {fileID: 2112407296}
-  - component: {fileID: 2112407295}
-  - component: {fileID: 2112407294}
-  m_Layer: 7
-  m_Name: XpPickup (59)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2112407293
+--- !u!4 &2112407293 stripped
 Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 6251967713771983072, guid: 3cb6dd5dff6104a0d961eaa22c3eabf3, type: 3}
+  m_PrefabInstance: {fileID: 1067329188069717303}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2112407292}
-  serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 13.982667, y: -1.17, z: 4.7099996}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 0.7}
-  m_ConstrainProportionsScale: 1
-  m_Children: []
-  m_Father: {fileID: 2140102306}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2112407294
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2112407292}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  value: 10
---- !u!135 &2112407295
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2112407292}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &2112407296
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2112407292}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 600012dbc1199420eb2c7434d10abf83, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &2112407297
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2112407292}
-  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2127238219
 GameObject:
   m_ObjectHideFlags: 0
@@ -15065,7 +14996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 699fd36666ac54fe8b89b6d4269f5a1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  value: 10
+  <value>k__BackingField: 10
 --- !u!135 &2127238222
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -15373,6 +15304,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2143659116}
   m_CullTransparentMesh: 1
+--- !u!1001 &1067329188069717303
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 2140102306}
+    m_Modifications:
+    - target: {fileID: 6251967713771983072, guid: 3cb6dd5dff6104a0d961eaa22c3eabf3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.982667
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251967713771983072, guid: 3cb6dd5dff6104a0d961eaa22c3eabf3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251967713771983072, guid: 3cb6dd5dff6104a0d961eaa22c3eabf3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 4.7099996
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251967713771983072, guid: 3cb6dd5dff6104a0d961eaa22c3eabf3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251967713771983072, guid: 3cb6dd5dff6104a0d961eaa22c3eabf3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251967713771983072, guid: 3cb6dd5dff6104a0d961eaa22c3eabf3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251967713771983072, guid: 3cb6dd5dff6104a0d961eaa22c3eabf3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251967713771983072, guid: 3cb6dd5dff6104a0d961eaa22c3eabf3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251967713771983072, guid: 3cb6dd5dff6104a0d961eaa22c3eabf3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6251967713771983072, guid: 3cb6dd5dff6104a0d961eaa22c3eabf3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7688058796994521944, guid: 3cb6dd5dff6104a0d961eaa22c3eabf3, type: 3}
+      propertyPath: m_Name
+      value: XpPickup (59)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3cb6dd5dff6104a0d961eaa22c3eabf3, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -15384,3 +15372,4 @@ SceneRoots:
   - {fileID: 904165782}
   - {fileID: 1733318618}
   - {fileID: 436394935}
+  - {fileID: 1666052753}

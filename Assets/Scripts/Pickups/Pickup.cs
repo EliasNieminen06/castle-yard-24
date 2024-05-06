@@ -2,6 +2,8 @@
 
 public abstract class Pickup : MonoBehaviour, IVisitor
 {
+    public float DistanceToPlayer => (GameManager.Instance.Player.position - transform.position).magnitude;
+
     protected abstract void ApplyPickupEffect(Hero hero);
 
     public void Visit<T>(T visitable) where T : Component, IVisitable
