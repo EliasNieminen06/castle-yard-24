@@ -6,7 +6,8 @@ public enum StatType
     MaxHp,
     Attack,
     Defense,
-    Speed
+    Speed,
+    Magnet,
 }
 
 public class Stats
@@ -61,11 +62,22 @@ public class Stats
         }
     }
 
+    public float Magnet
+    {
+        get
+        {
+            // Return value with modifiers applied
+            var q = new Query(StatType.Magnet, baseStats.magnet);
+            mediator.PerformQuery(this, q);
+            return q.Value;
+        }
+    }
+
     public Stats(StatsMediator mediator, BaseStats baseStats)
     {
         this.mediator = mediator;
         this.baseStats = baseStats;
     }
 
-    public override string ToString() => $"MaxHp: {MaxHp}, Attack: {Attack}, Defense: {Defense}, Speed: {Math.Round(Speed, 2)}";
+    public override string ToString() => $"MaxHp: {MaxHp}, Attack: {Attack}, Defense: {Defense}, Speed: {Math.Round(Speed, 2)}, Magnet: {Math.Round(Magnet, 2)}";
 }

@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 457419}
   - component: {fileID: 457418}
   - component: {fileID: 457417}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (24)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -255,7 +255,7 @@ GameObject:
   - component: {fileID: 5103183}
   - component: {fileID: 5103182}
   - component: {fileID: 5103181}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SpeedPickup (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -374,7 +374,7 @@ GameObject:
   - component: {fileID: 23413765}
   - component: {fileID: 23413764}
   - component: {fileID: 23413763}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HealthPickup (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,7 +493,7 @@ GameObject:
   - component: {fileID: 25345015}
   - component: {fileID: 25345014}
   - component: {fileID: 25345013}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HealthPack (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -613,7 +613,7 @@ GameObject:
   - component: {fileID: 103107105}
   - component: {fileID: 103107104}
   - component: {fileID: 103107103}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (38)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -815,7 +815,7 @@ GameObject:
   - component: {fileID: 121670724}
   - component: {fileID: 121670723}
   - component: {fileID: 121670722}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (29)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -934,7 +934,7 @@ GameObject:
   - component: {fileID: 141976389}
   - component: {fileID: 141976388}
   - component: {fileID: 141976387}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (42)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1053,7 +1053,7 @@ GameObject:
   - component: {fileID: 152695827}
   - component: {fileID: 152695826}
   - component: {fileID: 152695825}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HealthPack (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1173,7 +1173,7 @@ GameObject:
   - component: {fileID: 183729518}
   - component: {fileID: 183729517}
   - component: {fileID: 183729516}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (30)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1292,7 +1292,7 @@ GameObject:
   - component: {fileID: 222220487}
   - component: {fileID: 222220486}
   - component: {fileID: 222220485}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1411,7 +1411,7 @@ GameObject:
   - component: {fileID: 223394022}
   - component: {fileID: 223394021}
   - component: {fileID: 223394020}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1530,7 +1530,7 @@ GameObject:
   - component: {fileID: 236790302}
   - component: {fileID: 236790301}
   - component: {fileID: 236790300}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (58)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1649,7 +1649,7 @@ GameObject:
   - component: {fileID: 238053294}
   - component: {fileID: 238053293}
   - component: {fileID: 238053297}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DefensePickup (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1768,7 +1768,7 @@ GameObject:
   - component: {fileID: 250580546}
   - component: {fileID: 250580545}
   - component: {fileID: 250580544}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1887,7 +1887,7 @@ GameObject:
   - component: {fileID: 267326990}
   - component: {fileID: 267326989}
   - component: {fileID: 267326988}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2192,7 +2192,7 @@ GameObject:
   - component: {fileID: 274107909}
   - component: {fileID: 274107908}
   - component: {fileID: 274107912}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DefensePickup (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2445,7 +2445,7 @@ GameObject:
   - component: {fileID: 292242471}
   - component: {fileID: 292242470}
   - component: {fileID: 292242469}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (33)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2564,7 +2564,7 @@ GameObject:
   - component: {fileID: 316837835}
   - component: {fileID: 316837834}
   - component: {fileID: 316837833}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2683,7 +2683,7 @@ GameObject:
   - component: {fileID: 333940393}
   - component: {fileID: 333940392}
   - component: {fileID: 333940391}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (46)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2802,7 +2802,7 @@ GameObject:
   - component: {fileID: 334349309}
   - component: {fileID: 334349308}
   - component: {fileID: 334349307}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2921,7 +2921,7 @@ GameObject:
   - component: {fileID: 338167490}
   - component: {fileID: 338167489}
   - component: {fileID: 338167493}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AttackPickup (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3174,7 +3174,7 @@ GameObject:
   - component: {fileID: 346656708}
   - component: {fileID: 346656707}
   - component: {fileID: 346656706}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SpeedPickup (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3426,7 +3426,7 @@ GameObject:
   - component: {fileID: 399406871}
   - component: {fileID: 399406870}
   - component: {fileID: 399406869}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SpeedPickup (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3545,7 +3545,7 @@ GameObject:
   - component: {fileID: 414743286}
   - component: {fileID: 414743285}
   - component: {fileID: 414743284}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PermanentHpPickup (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3664,7 +3664,7 @@ GameObject:
   - component: {fileID: 422748765}
   - component: {fileID: 422748764}
   - component: {fileID: 422748763}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3783,7 +3783,7 @@ GameObject:
   - component: {fileID: 423991824}
   - component: {fileID: 423991823}
   - component: {fileID: 423991822}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (70)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3902,7 +3902,7 @@ GameObject:
   - component: {fileID: 424767063}
   - component: {fileID: 424767062}
   - component: {fileID: 424767061}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4021,7 +4021,7 @@ GameObject:
   - component: {fileID: 427728124}
   - component: {fileID: 427728123}
   - component: {fileID: 427728122}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4305,6 +4305,7 @@ Transform:
   - {fileID: 23413762}
   - {fileID: 599844485}
   - {fileID: 486854477}
+  - {fileID: 2045201771}
   - {fileID: 5103180}
   - {fileID: 399406868}
   - {fileID: 346656705}
@@ -4330,7 +4331,7 @@ GameObject:
   - component: {fileID: 439457495}
   - component: {fileID: 439457494}
   - component: {fileID: 439457493}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (40)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4449,7 +4450,7 @@ GameObject:
   - component: {fileID: 450921901}
   - component: {fileID: 450921900}
   - component: {fileID: 450921899}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (62)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4568,7 +4569,7 @@ GameObject:
   - component: {fileID: 464182435}
   - component: {fileID: 464182434}
   - component: {fileID: 464182433}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (34)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4687,7 +4688,7 @@ GameObject:
   - component: {fileID: 472628778}
   - component: {fileID: 472628777}
   - component: {fileID: 472628776}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (49)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4913,7 +4914,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: 0, z: 34.75595, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4940,7 +4941,7 @@ GameObject:
   - component: {fileID: 486854475}
   - component: {fileID: 486854474}
   - component: {fileID: 486854478}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: SpeedPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5059,7 +5060,7 @@ GameObject:
   - component: {fileID: 503021428}
   - component: {fileID: 503021427}
   - component: {fileID: 503021426}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (28)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5178,7 +5179,7 @@ GameObject:
   - component: {fileID: 531468711}
   - component: {fileID: 531468710}
   - component: {fileID: 531468714}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HealthPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5418,7 +5419,7 @@ GameObject:
   - component: {fileID: 532803414}
   - component: {fileID: 532803413}
   - component: {fileID: 532803412}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (55)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5658,7 +5659,7 @@ GameObject:
   - component: {fileID: 561024361}
   - component: {fileID: 561024360}
   - component: {fileID: 561024359}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (67)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5777,7 +5778,7 @@ GameObject:
   - component: {fileID: 573424967}
   - component: {fileID: 573424966}
   - component: {fileID: 573424965}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5896,7 +5897,7 @@ GameObject:
   - component: {fileID: 599844488}
   - component: {fileID: 599844487}
   - component: {fileID: 599844486}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HealthPickup (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6149,7 +6150,7 @@ GameObject:
   - component: {fileID: 623461803}
   - component: {fileID: 623461802}
   - component: {fileID: 623461801}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (39)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6268,7 +6269,7 @@ GameObject:
   - component: {fileID: 677252846}
   - component: {fileID: 677252845}
   - component: {fileID: 677252844}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PermanentHpPickup (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6387,7 +6388,7 @@ GameObject:
   - component: {fileID: 688766007}
   - component: {fileID: 688766006}
   - component: {fileID: 688766005}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6766,7 +6767,7 @@ GameObject:
   - component: {fileID: 743796821}
   - component: {fileID: 743796820}
   - component: {fileID: 743796819}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (45)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6968,7 +6969,7 @@ GameObject:
   - component: {fileID: 775285295}
   - component: {fileID: 775285294}
   - component: {fileID: 775285293}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (65)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7087,7 +7088,7 @@ GameObject:
   - component: {fileID: 776433349}
   - component: {fileID: 776433348}
   - component: {fileID: 776433347}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7206,7 +7207,7 @@ GameObject:
   - component: {fileID: 780838588}
   - component: {fileID: 780838587}
   - component: {fileID: 780838586}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (43)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7325,7 +7326,7 @@ GameObject:
   - component: {fileID: 790020706}
   - component: {fileID: 790020705}
   - component: {fileID: 790020704}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (69)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7496,7 +7497,7 @@ GameObject:
   - component: {fileID: 816490553}
   - component: {fileID: 816490552}
   - component: {fileID: 816490556}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PermanentHpPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7615,7 +7616,7 @@ GameObject:
   - component: {fileID: 831089602}
   - component: {fileID: 831089601}
   - component: {fileID: 831089600}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (25)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7734,7 +7735,7 @@ GameObject:
   - component: {fileID: 835494418}
   - component: {fileID: 835494417}
   - component: {fileID: 835494416}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (41)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7853,7 +7854,7 @@ GameObject:
   - component: {fileID: 865109874}
   - component: {fileID: 865109873}
   - component: {fileID: 865109872}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (47)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8080,7 +8081,7 @@ GameObject:
   - component: {fileID: 912901714}
   - component: {fileID: 912901713}
   - component: {fileID: 912901712}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (68)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8454,7 +8455,7 @@ GameObject:
   - component: {fileID: 958559597}
   - component: {fileID: 958559596}
   - component: {fileID: 958559595}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (61)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8573,7 +8574,7 @@ GameObject:
   - component: {fileID: 958640616}
   - component: {fileID: 958640615}
   - component: {fileID: 958640614}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PermanentHpPickup (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8784,7 +8785,7 @@ GameObject:
   - component: {fileID: 972104320}
   - component: {fileID: 972104319}
   - component: {fileID: 972104318}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (36)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8903,7 +8904,7 @@ GameObject:
   - component: {fileID: 1012125772}
   - component: {fileID: 1012125771}
   - component: {fileID: 1012125770}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HealthPack (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9262,7 +9263,7 @@ GameObject:
   - component: {fileID: 1064666341}
   - component: {fileID: 1064666340}
   - component: {fileID: 1064666339}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (57)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9381,7 +9382,7 @@ GameObject:
   - component: {fileID: 1066055934}
   - component: {fileID: 1066055933}
   - component: {fileID: 1066055932}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9500,7 +9501,7 @@ GameObject:
   - component: {fileID: 1066351449}
   - component: {fileID: 1066351448}
   - component: {fileID: 1066351447}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (31)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9619,7 +9620,7 @@ GameObject:
   - component: {fileID: 1069337262}
   - component: {fileID: 1069337261}
   - component: {fileID: 1069337260}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (56)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9738,7 +9739,7 @@ GameObject:
   - component: {fileID: 1105107918}
   - component: {fileID: 1105107917}
   - component: {fileID: 1105107916}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9857,7 +9858,7 @@ GameObject:
   - component: {fileID: 1152228291}
   - component: {fileID: 1152228290}
   - component: {fileID: 1152228289}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (52)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9976,7 +9977,7 @@ GameObject:
   - component: {fileID: 1169519201}
   - component: {fileID: 1169519200}
   - component: {fileID: 1169519199}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10095,7 +10096,7 @@ GameObject:
   - component: {fileID: 1169664170}
   - component: {fileID: 1169664169}
   - component: {fileID: 1169664168}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PermanentHpPickup (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10214,7 +10215,7 @@ GameObject:
   - component: {fileID: 1175770155}
   - component: {fileID: 1175770154}
   - component: {fileID: 1175770153}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (64)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10333,7 +10334,7 @@ GameObject:
   - component: {fileID: 1181391322}
   - component: {fileID: 1181391321}
   - component: {fileID: 1181391320}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10452,7 +10453,7 @@ GameObject:
   - component: {fileID: 1200179103}
   - component: {fileID: 1200179102}
   - component: {fileID: 1200179101}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (51)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10571,7 +10572,7 @@ GameObject:
   - component: {fileID: 1208828256}
   - component: {fileID: 1208828255}
   - component: {fileID: 1208828254}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10690,7 +10691,7 @@ GameObject:
   - component: {fileID: 1232030163}
   - component: {fileID: 1232030162}
   - component: {fileID: 1232030161}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (32)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10809,7 +10810,7 @@ GameObject:
   - component: {fileID: 1241305397}
   - component: {fileID: 1241305396}
   - component: {fileID: 1241305395}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (66)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10928,7 +10929,7 @@ GameObject:
   - component: {fileID: 1242553160}
   - component: {fileID: 1242553159}
   - component: {fileID: 1242553158}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (50)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11047,7 +11048,7 @@ GameObject:
   - component: {fileID: 1304980627}
   - component: {fileID: 1304980626}
   - component: {fileID: 1304980629}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HealthPack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11167,7 +11168,7 @@ GameObject:
   - component: {fileID: 1331525624}
   - component: {fileID: 1331525623}
   - component: {fileID: 1331525622}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11286,7 +11287,7 @@ GameObject:
   - component: {fileID: 1375815343}
   - component: {fileID: 1375815342}
   - component: {fileID: 1375815341}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (48)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11673,7 +11674,7 @@ GameObject:
   - component: {fileID: 1429772445}
   - component: {fileID: 1429772444}
   - component: {fileID: 1429772443}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (60)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11875,7 +11876,7 @@ GameObject:
   - component: {fileID: 1457571760}
   - component: {fileID: 1457571759}
   - component: {fileID: 1457571758}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11994,7 +11995,7 @@ GameObject:
   - component: {fileID: 1491452752}
   - component: {fileID: 1491452751}
   - component: {fileID: 1491452750}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12252,6 +12253,9 @@ MonoBehaviour:
   statsText: {fileID: 481031598}
   levelsText: {fileID: 343129530}
   healthText: {fileID: 1017030954}
+  pickupLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &1563436144
 GameObject:
   m_ObjectHideFlags: 0
@@ -12265,7 +12269,7 @@ GameObject:
   - component: {fileID: 1563436148}
   - component: {fileID: 1563436147}
   - component: {fileID: 1563436146}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (27)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12384,7 +12388,7 @@ GameObject:
   - component: {fileID: 1584459676}
   - component: {fileID: 1584459675}
   - component: {fileID: 1584459674}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12503,7 +12507,7 @@ GameObject:
   - component: {fileID: 1612188666}
   - component: {fileID: 1612188665}
   - component: {fileID: 1612188664}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (26)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12622,7 +12626,7 @@ GameObject:
   - component: {fileID: 1621014240}
   - component: {fileID: 1621014239}
   - component: {fileID: 1621014238}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (54)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12741,7 +12745,7 @@ GameObject:
   - component: {fileID: 1645589675}
   - component: {fileID: 1645589674}
   - component: {fileID: 1645589673}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12860,7 +12864,7 @@ GameObject:
   - component: {fileID: 1712052165}
   - component: {fileID: 1712052164}
   - component: {fileID: 1712052168}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AttackPickup (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12979,7 +12983,7 @@ GameObject:
   - component: {fileID: 1725518416}
   - component: {fileID: 1725518415}
   - component: {fileID: 1725518414}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (44)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13166,7 +13170,7 @@ GameObject:
   - component: {fileID: 1734908656}
   - component: {fileID: 1734908655}
   - component: {fileID: 1734908654}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HealthPack (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13286,7 +13290,7 @@ GameObject:
   - component: {fileID: 1753318538}
   - component: {fileID: 1753318537}
   - component: {fileID: 1753318536}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (63)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13405,7 +13409,7 @@ GameObject:
   - component: {fileID: 1768732883}
   - component: {fileID: 1768732882}
   - component: {fileID: 1768732881}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13524,7 +13528,7 @@ GameObject:
   - component: {fileID: 1770926224}
   - component: {fileID: 1770926223}
   - component: {fileID: 1770926222}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (71)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13643,7 +13647,7 @@ GameObject:
   - component: {fileID: 1797264422}
   - component: {fileID: 1797264421}
   - component: {fileID: 1797264425}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: AttackPickup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13762,7 +13766,7 @@ GameObject:
   - component: {fileID: 1831316882}
   - component: {fileID: 1831316881}
   - component: {fileID: 1831316885}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: DefensePickup (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13881,7 +13885,7 @@ GameObject:
   - component: {fileID: 1913660130}
   - component: {fileID: 1913660129}
   - component: {fileID: 1913660128}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (53)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14000,7 +14004,7 @@ GameObject:
   - component: {fileID: 1919954357}
   - component: {fileID: 1919954356}
   - component: {fileID: 1919954355}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HealthPack (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14120,7 +14124,7 @@ GameObject:
   - component: {fileID: 1921755452}
   - component: {fileID: 1921755451}
   - component: {fileID: 1921755450}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (23)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14239,7 +14243,7 @@ GameObject:
   - component: {fileID: 1936364963}
   - component: {fileID: 1936364962}
   - component: {fileID: 1936364961}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PermanentHpPickup (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14513,6 +14517,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b121003f553194df7bb03dbfb7c08283, type: 2}
   - {fileID: 11400000, guid: 048a2bafc19ab46a4a4e6faec249ef92, type: 2}
   - {fileID: 11400000, guid: af83dcad7c66841b28ed1134754935e2, type: 2}
+  - {fileID: 11400000, guid: 54e9fa5ccf5c8469b9e7467683fbeac9, type: 2}
   upgradeOptions:
   - {fileID: 2026252318}
   - {fileID: 270750502}
@@ -14656,6 +14661,125 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2044588984}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &2045201770
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2045201771}
+  - component: {fileID: 2045201775}
+  - component: {fileID: 2045201774}
+  - component: {fileID: 2045201773}
+  - component: {fileID: 2045201772}
+  m_Layer: 7
+  m_Name: SpeedPickup (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2045201771
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045201770}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -28.14, y: -1.17, z: -17.9}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 436394935}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2045201772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045201770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c4e3f2baf4cf94de78f5ce14b99f25e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseModifier: {fileID: 11400000, guid: 5533abae023a74e69901423e2eee4e6d, type: 2}
+--- !u!135 &2045201773
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045201770}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &2045201774
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045201770}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 65c6ce9b3c6464517a2992477db36407, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &2045201775
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045201770}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &2100177182
 GameObject:
   m_ObjectHideFlags: 0
@@ -14669,7 +14793,7 @@ GameObject:
   - component: {fileID: 2100177186}
   - component: {fileID: 2100177185}
   - component: {fileID: 2100177184}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (37)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14788,7 +14912,7 @@ GameObject:
   - component: {fileID: 2112407296}
   - component: {fileID: 2112407295}
   - component: {fileID: 2112407294}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (59)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14907,7 +15031,7 @@ GameObject:
   - component: {fileID: 2127238223}
   - component: {fileID: 2127238222}
   - component: {fileID: 2127238221}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: XpPickup (35)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

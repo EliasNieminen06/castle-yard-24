@@ -1,4 +1,5 @@
-﻿using System;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
@@ -9,6 +10,10 @@ public class Hero : Unit, IVisitable
     public TextMeshProUGUI healthText;
 
     public Levels Levels { get; private set; }
+
+    [SerializeField] LayerMask pickupLayer;
+    private int pickupsToAttract = 1;
+    private int pickupsToAttractIncrement = 1;
 
     public override void Init()
     {
@@ -59,6 +64,46 @@ public class Hero : Unit, IVisitable
     {
         levelsText.text = Levels.ToString();
         base.Update();
+    }
+
+    private void FixedUpdate()
+    {
+        var pickupsAttracted = AttractPickups(pickupsToAttract);
+        pickupsToAttract = pickupsAttracted.amountAttracted;
+
+        if (pickupsAttracted.wasMax)
+        {
+            pickupsToAttract += pickupsToAttractIncrement;
+            pickupsToAttractIncrement++;
+        }
+        else
+        {
+            pickupsToAttractIncrement = 1;
+        }
+    }
+
+    private (int amountAttracted, bool wasMax) AttractPickups(int maxAmount)
+    {
+        Collider[] collidersToAttract = new Collider[maxAmount];
+        int amount = Physics.OverlapSphereNonAlloc(transform.position, Stats.Magnet, collidersToAttract, pickupLayer);
+
+        print("Attracting " + amount + " Pickups");
+
+        foreach (var collider in collidersToAttract)
+        {
+            if (collider == null) continue;
+
+            float distanceToPickup = (transform.position - collider.transform.position).magnitude;
+            print(distanceToPickup);
+            float pickupAttractionDelta = Helpers.Map(distanceToPickup, 0f, Stats.Magnet, 1f, 4f, false);
+
+            print("Attraction Delta " + pickupAttractionDelta);
+            collider.transform.position = Vector3.MoveTowards(collider.transform.position, transform.position, 1f / pickupAttractionDelta);
+        }
+
+        bool wasMax = false;
+        if (amount == maxAmount) wasMax = true;
+        return (amount, wasMax);
     }
 
     public void Accept(IVisitor visitor) => visitor.Visit(this);
