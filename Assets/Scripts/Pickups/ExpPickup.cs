@@ -12,7 +12,7 @@ public class ExpPickup : Pickup
         ExpPickupManager.RemoveExpPickup(this);
     }
 
-    private void Start()
+    private void Awake()
     {
         if (Initialized) return;
         ExpPickupManager.AddExpPickup(this);

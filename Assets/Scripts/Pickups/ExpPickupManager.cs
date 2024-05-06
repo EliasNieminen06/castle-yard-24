@@ -9,7 +9,7 @@ public static class ExpPickupManager
 
     public static void AddExpPickup(ExpPickup expPickup)
     {
-        if (expPickups.Count > maxPickups)
+        if (expPickups.Count >= maxPickups)
         {
             Debug.Log("MaxPickups Reached Absorbing Farthest");
             ExpPickup farthestPickup = FarthestExpPickupFromPlayer;
