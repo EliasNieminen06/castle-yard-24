@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f5da66af6230490ebafae2e2af985e6, type: 3}
+  m_Name: Attack
+  m_EditorClassIdentifier: 
+  upgradeName: Attack
+  type: 1
+  operatorType: 0
+  commonValue: 3
+  rareValue: 5
+  epicValue: 8
+  legendaryValue: 15
+  commonWeight: 50
+  rareWeight: 38
+  epicWeight: 10
+  legendaryWeight: 2
