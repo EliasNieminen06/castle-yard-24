@@ -45,6 +45,14 @@ public class Hero : Unit, IVisitable
     {
         statsText.text = Stats.ToString();
         healthText.text = Health.ToString();
+
+        if(GetComponent<PlayerMovementHandler>() != null)
+        {
+            this.GetComponent<PlayerMovementHandler>().ModifySpeed();
+        }
+        
+
+        
     }
 
     private void Awake()

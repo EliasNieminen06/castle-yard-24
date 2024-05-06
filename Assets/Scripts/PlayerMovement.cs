@@ -5,11 +5,16 @@ public class PlayerMovementHandler : MonoBehaviour
     public float playerMovementSpeed;
     private Vector3 playerMovementVector;
     private Rigidbody PlayerRB;
+    public Hero hero;
 
     void Start()
     {
         playerMovementSpeed = 4;
         PlayerRB = this.GetComponent<Rigidbody>();
+        hero = this.GetComponent<Hero>();
+
+        playerMovementSpeed = hero.Stats.Speed;
+        
     }
 
     private void Update()
@@ -24,5 +29,12 @@ public class PlayerMovementHandler : MonoBehaviour
         
         PlayerRB.velocity = playerMovementVector * playerMovementSpeed;
        
+    }
+
+
+
+     public void ModifySpeed()
+    {
+        playerMovementSpeed = hero.Stats.Speed;
     }
 }

@@ -15,5 +15,5 @@ MonoBehaviour:
   maxHp: 100
   attack: 10
   defense: 5
-  speed: 7.5
+  speed: 4
   magnet: 1.5

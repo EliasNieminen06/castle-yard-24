@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6207055061955025726}
   - component: {fileID: 4769830710431950849}
   - component: {fileID: 6935090692519252341}
+  - component: {fileID: 7216386868662314556}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -50,6 +51,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerMovementSpeed: 1
+  hero: {fileID: 0}
 --- !u!114 &6207055061955025726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -79,9 +81,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00afe040387454655b93f68e16d71503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunEnd: {fileID: 0}
-  bullet: {fileID: 0}
-  gunAudio: {fileID: 0}
+  gunEnd: {fileID: 1763504666879244243}
+  bullet: {fileID: 688853843678793903, guid: 527121880a07642e4a4e5f61aac4cc09, type: 3}
 --- !u!54 &6935090692519252341
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -109,6 +110,25 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 84
   m_CollisionDetection: 1
+--- !u!114 &7216386868662314556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 237320366210088146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92fa61501527f4af8876bfc43b0b3e91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  baseStats: {fileID: 11400000, guid: 4adafbb22ff864c3baee42e1cddf4522, type: 2}
+  statsText: {fileID: 0}
+  levelsText: {fileID: 0}
+  healthText: {fileID: 0}
+  pickupLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!1 &2224791157719280388
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +160,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0.5}
   m_LocalScale: {x: 0.2, y: 0.2, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1763504666879244243}
   m_Father: {fileID: 2699028976185832583}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2718174007988546275
@@ -214,6 +235,37 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &6580834579053686979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1763504666879244243}
+  m_Layer: 0
+  m_Name: GunEnd
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1763504666879244243
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6580834579053686979}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8265000399138221662}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8452433210175631812
 GameObject:
   m_ObjectHideFlags: 0
