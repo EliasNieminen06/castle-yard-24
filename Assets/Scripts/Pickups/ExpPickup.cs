@@ -17,7 +17,7 @@ public class ExpPickup : Pickup
         if (Initialized) return;
         ExpPickupManager.AddExpPickup(this);
     }
-    private void Init(int value)
+    public void Init(int value)
     {
         Initialized = true;
         ExpPickupManager.AddExpPickup(this);

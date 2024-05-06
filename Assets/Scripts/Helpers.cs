@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-public class Helpers
+public static class Helpers
 {
     public static float Map(float value, float originalMin, float originalMax, float newMin, float newMax, bool clamp)
     {

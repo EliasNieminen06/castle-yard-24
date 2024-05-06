@@ -1,10 +1,15 @@
 ﻿using UnityEngine;
 
-public abstract class Pickup : MonoBehaviour, IVisitor
+public abstract class Pickup : Entity, IVisitor
 {
     public float DistanceToPlayer => (GameManager.Instance.Player.position - transform.position).magnitude;
 
     protected abstract void ApplyPickupEffect(Hero hero);
+
+    public override void Init()
+    {
+        base.Init();
+    }
 
     public void Visit<T>(T visitable) where T : Component, IVisitable
     {

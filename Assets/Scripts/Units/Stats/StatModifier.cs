@@ -97,7 +97,7 @@ public abstract class StatModifier : IDisposable
     }
 
     /// <summary>
-    /// Returns true if modifier is modifyable and was modified
+    /// Returns true if modifier was modified
     /// </summary>
     public bool Modify()
     {
