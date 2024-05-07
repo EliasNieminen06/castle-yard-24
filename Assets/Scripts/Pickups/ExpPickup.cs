@@ -4,7 +4,6 @@ public class ExpPickup : Pickup
 {
     [field: SerializeField] public int value { get; private set; } = 10;
 
-    private bool Initialized = false;
 
     protected override void ApplyPickupEffect(Hero hero)
     {
@@ -12,16 +11,10 @@ public class ExpPickup : Pickup
         ExpPickupManager.RemoveExpPickup(this);
     }
 
-    private void Awake()
+    public override void Init()
     {
-        if (Initialized) return;
         ExpPickupManager.AddExpPickup(this);
-    }
-    public void Init(int value)
-    {
-        Initialized = true;
-        ExpPickupManager.AddExpPickup(this);
-        this.value = value;
+        base.Init();
     }
 
     public void Absorb(ExpPickup expPickup)
@@ -29,5 +22,10 @@ public class ExpPickup : Pickup
         value += expPickup.value;
         ExpPickupManager.RemoveExpPickup(expPickup);
         Destroy(expPickup.gameObject);
+    }
+
+    public void SetValue(int value)
+    {
+        this.value = value;
     }
 }

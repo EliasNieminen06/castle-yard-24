@@ -22,6 +22,6 @@ public abstract class Pickup : Entity, IVisitor
 
     public void OnTriggerEnter(Collider other)
     {
-        other.GetComponent<IVisitable>()?.Accept(this);
+        other.GetComponentInParent<IVisitable>()?.Accept(this);
     }
 }

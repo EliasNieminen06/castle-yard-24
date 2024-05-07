@@ -125,7 +125,8 @@ public abstract class StatModifier : IDisposable
 
     protected virtual void Stack()
     {
-        currentValue += config.value;
+        if (config.stackValue == 0) currentValue += config.value;
+        else currentValue += config.stackValue;
     }
     protected virtual void AddTime(float amount)
     {
@@ -163,10 +164,11 @@ public struct StatModifierConfig
     public readonly float value;
     public readonly float duration;
     public readonly bool stackable;
+    public readonly float stackValue;
     public readonly bool refreshable;
     public readonly bool timeStackable;
 
-    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value, float duration, bool stackable, bool refreshable, bool timeStackable)
+    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value, float duration, bool stackable, float stackValue, bool refreshable, bool timeStackable)
     {
         this.name = name;
         this.type = type;
@@ -174,11 +176,12 @@ public struct StatModifierConfig
         this.value = value;
         this.duration = duration;
         this.stackable = stackable;
+        this.stackValue = stackValue;
         this.refreshable = refreshable;
         this.timeStackable = timeStackable;
     }
 
-    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value)
+    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value, float stackValue)
     {
         this.name = name;
         this.type = type;
@@ -186,6 +189,7 @@ public struct StatModifierConfig
         this.value = value;
         this.duration = 0;
         this.stackable = true;
+        this.stackValue = stackValue;
         this.refreshable = false;
         this.timeStackable = false;
     }
