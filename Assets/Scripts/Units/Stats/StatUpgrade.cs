@@ -7,6 +7,7 @@ public class StatUpgrade : ScriptableObject
     public string upgradeName;
     public StatType type;
     public StatModifier.OperatorType operatorType;
+    public int weight;
 
     [Header("Values")]
     public float commonValue;

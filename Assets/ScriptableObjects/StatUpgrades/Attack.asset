@@ -15,10 +15,15 @@ MonoBehaviour:
   upgradeName: Attack
   type: 1
   operatorType: 0
+  weight: 100
   commonValue: 3
   rareValue: 5
   epicValue: 8
   legendaryValue: 15
+  commonStackValue: 0
+  rareStackValue: 0
+  epicStackValue: 0
+  legendaryStackValue: 0
   commonWeight: 50
   rareWeight: 38
   epicWeight: 10

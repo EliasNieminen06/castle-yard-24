@@ -1,5 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System;
+using System.Collections;
 
 public class LevelUpScreen : MonoBehaviour
 {
@@ -79,14 +81,49 @@ public class LevelUpScreen : MonoBehaviour
 
     private StatUpgrade GetRandomUpgrade(List<StatUpgrade> currentUpgrades)
     {
-        int randomIndex = Random.Range(0, statUpgrades.Count);
+        Dictionary<StatUpgrade, ValueTuple<int, int>> upgradeDictionary = new Dictionary<StatUpgrade, ValueTuple<int, int>>();
+        int totalWeight = 0;
 
-        while (currentUpgrades.Contains(statUpgrades[randomIndex]))
+        foreach (var upgrade in statUpgrades)
         {
-            randomIndex = Random.Range(0, statUpgrades.Count);
+            ValueTuple<int, int> tuple = (totalWeight + 1, 0); 
+            totalWeight += upgrade.weight;
+            tuple.Item2 = totalWeight;
+            upgradeDictionary.Add(upgrade, tuple);
         }
 
-        return statUpgrades[randomIndex];
+        int randomWeight = UnityEngine.Random.Range(1, totalWeight);
+        //Debug.Log("Trying to get upgrade with a weight of: " + randomWeight);
+        StatUpgrade currentUpgrade = GetUpgradeWithWeight(randomWeight);
+
+        while (currentUpgrades.Contains(currentUpgrade))
+        {
+            randomWeight = UnityEngine.Random.Range(0, totalWeight);
+            //Debug.Log("Trying to get upgrade with a weight of: " + randomWeight);
+            currentUpgrade = GetUpgradeWithWeight(randomWeight);
+        }
+
+        //Debug.Log("Got Upgrade: " + currentUpgrade);
+        return currentUpgrade;
+
+        StatUpgrade GetUpgradeWithWeight(int weight)
+        {
+            foreach (var upgrade in statUpgrades)
+            {
+                ValueTuple<int, int> rangeTuple = (0, 0);
+                if (upgradeDictionary.TryGetValue(upgrade, out rangeTuple) == false)
+                {
+                    throw new IndexOutOfRangeException("Upgrade not in Dictionary");
+                }
+
+                if (rangeTuple.Item1 <= randomWeight && rangeTuple.Item2 >= randomWeight)
+                {
+                    return upgrade;
+                }
+            }
+
+            throw new ArgumentOutOfRangeException("Did not find an upgrade with given weight");
+        }
     }
 
     private (StatModifierConfig config, Color color) GetConfigAndColor(StatUpgrade upgrade)
@@ -96,7 +133,7 @@ public class LevelUpScreen : MonoBehaviour
         int epic = rare + upgrade.epicWeight;
         int legendary = epic + upgrade.legendaryWeight;
 
-        int randomWeight = Random.Range(1, legendary + 1);
+        int randomWeight = UnityEngine.Random.Range(1, legendary + 1);
 
         StatModifierConfig config;
         Color rarityColor;
