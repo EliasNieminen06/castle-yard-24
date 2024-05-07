@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeName: MaxHp
   type: 0
   operatorType: 0
-  weight: 50
+  weight: 30
   commonValue: 2
   rareValue: 3
   epicValue: 5

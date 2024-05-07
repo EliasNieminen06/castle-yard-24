@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeName: Defense
   type: 2
   operatorType: 0
-  weight: 100
+  weight: 50
   commonValue: 2
   rareValue: 4
   epicValue: 7

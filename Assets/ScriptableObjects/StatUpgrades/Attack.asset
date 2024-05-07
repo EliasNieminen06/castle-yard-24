@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeName: Attack
   type: 1
   operatorType: 0
-  weight: 100
+  weight: 50
   commonValue: 3
   rareValue: 5
   epicValue: 8
