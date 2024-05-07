@@ -86,9 +86,9 @@ public class LevelUpScreen : MonoBehaviour
 
         foreach (var upgrade in statUpgrades)
         {
-            ValueTuple<int, int> tuple = (totalWeight + 1, 0); 
+            ValueTuple<int, int> tuple = (totalWeight, 0); 
             totalWeight += upgrade.weight;
-            tuple.Item2 = totalWeight;
+            tuple.Item2 = totalWeight - 1;
             upgradeDictionary.Add(upgrade, tuple);
         }
 
@@ -116,8 +116,9 @@ public class LevelUpScreen : MonoBehaviour
                     throw new IndexOutOfRangeException("Upgrade not in Dictionary");
                 }
 
-                if (rangeTuple.Item1 <= randomWeight && rangeTuple.Item2 >= randomWeight)
+                if (rangeTuple.Item1 <= weight && rangeTuple.Item2 >= weight)
                 {
+                    //Debug.Log(rangeTuple + " " + weight);
                     return upgrade;
                 }
             }
