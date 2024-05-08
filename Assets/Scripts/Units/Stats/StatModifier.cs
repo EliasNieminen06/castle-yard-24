@@ -72,6 +72,7 @@ public abstract class StatModifier : IDisposable
     public readonly StatModifierConfig config;
 
     public float currentValue { get; private set; }
+    public int stacks { get; private set; } = 1;
 
     private float timerEndTime;
     private float currentDuration;
@@ -108,7 +109,7 @@ public abstract class StatModifier : IDisposable
             ResetTimer();
             modified = true;
         }
-        if (config.stackable)
+        if (config.stackable && stacks < config.maxStacks || config.stackable && config.maxStacks == 0)
         {
             Stack();
             modified = true;
@@ -123,12 +124,14 @@ public abstract class StatModifier : IDisposable
         else return false;
     }
 
-    protected virtual void Stack()
+    protected void Stack()
     {
         if (config.stackValue == 0) currentValue += config.value;
         else currentValue += config.stackValue;
+
+        stacks++;
     }
-    protected virtual void AddTime(float amount)
+    protected void AddTime(float amount)
     {
         timerEndTime += amount;
         currentDuration = config.duration + amount;
@@ -165,10 +168,14 @@ public struct StatModifierConfig
     public readonly float duration;
     public readonly bool stackable;
     public readonly float stackValue;
+    public readonly int maxStacks;
     public readonly bool refreshable;
     public readonly bool timeStackable;
 
-    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value, float duration, bool stackable, float stackValue, bool refreshable, bool timeStackable)
+    /// <summary>
+    /// Used for Pickups
+    /// </summary>
+    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value, float duration, bool stackable, float stackValue, int maxStacks, bool refreshable, bool timeStackable)
     {
         this.name = name;
         this.type = type;
@@ -177,11 +184,15 @@ public struct StatModifierConfig
         this.duration = duration;
         this.stackable = stackable;
         this.stackValue = stackValue;
+        this.maxStacks = maxStacks;
         this.refreshable = refreshable;
         this.timeStackable = timeStackable;
     }
 
-    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value, float stackValue)
+    /// <summary>
+    /// Used for Items
+    /// </summary>
+    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value, float stackValue, int maxStacks)
     {
         this.name = name;
         this.type = type;
@@ -190,6 +201,24 @@ public struct StatModifierConfig
         this.duration = 0;
         this.stackable = true;
         this.stackValue = stackValue;
+        this.maxStacks = maxStacks;
+        this.refreshable = false;
+        this.timeStackable = false;
+    }
+
+    /// <summary>
+    /// Used for endless stat upgrades
+    /// </summary>
+    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value)
+    {
+        this.name = name;
+        this.type = type;
+        this.operatorType = operatorType;
+        this.value = value;
+        this.duration = 0;
+        this.stackable = true;
+        this.stackValue = 0;
+        this.maxStacks = 0;
         this.refreshable = false;
         this.timeStackable = false;
     }

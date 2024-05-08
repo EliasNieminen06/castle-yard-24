@@ -9,4 +9,7 @@ public class BaseStats : ScriptableObject
     public int defense;
     public float speed;
     public float magnet;
+    public float cooldownReduction;
+    public float areaOfEffect;
+    public float dodge;
 }

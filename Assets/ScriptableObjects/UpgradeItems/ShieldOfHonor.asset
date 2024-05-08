@@ -9,18 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2dd90f1951f4ebe966f175a306d4d4, type: 3}
-  m_Name: Speed
+  m_Script: {fileID: 11500000, guid: 50beabbfc3f1f49c39e2d4e3b54fde11, type: 3}
+  m_Name: ShieldOfHonor
   m_EditorClassIdentifier: 
-  upgradeName: Speed
-  type: 3
+  itemName: ShieldOfHonor
+  type: 2
   operatorType: 0
-  weight: 10
-  commonValue: 0.1
-  rareValue: 0.2
-  epicValue: 0.3
-  legendaryValue: 0.5
-  commonWeight: 50
-  rareWeight: 38
-  epicWeight: 10
-  legendaryWeight: 2
+  value: 20
+  stackValue: 0
+  maxStacks: 5
+  weight: 1
+  color: {r: 0.254717, g: 0.254717, b: 0.254717, a: 1}

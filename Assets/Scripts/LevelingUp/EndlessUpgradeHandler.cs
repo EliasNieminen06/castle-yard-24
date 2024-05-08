@@ -1,74 +1,23 @@
-﻿using UnityEngine;
-using System.Collections.Generic;
-using System;
+﻿using System;
 using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class LevelUpScreen : MonoBehaviour
+public class EndlessUpgradeHandler
 {
-    private static LevelUpScreen instance;
-
-    //[SerializeField] private List<BaseStatModifier> statModifiers;
-    [SerializeField] private List<StatUpgrade> statUpgrades;
-    [SerializeField] private List<StatUpgradeOption> upgradeOptions;
+    readonly List<StatUpgrade> statUpgrades;
 
     [Header("Rarity Colors")]
-    [SerializeField] private Color commonColor;
-    [SerializeField] private Color rareColor;
-    [SerializeField] private Color epicColor;
-    [SerializeField] private Color legendaryColor;
-
-    private event System.Action OnHide = delegate { };
+    readonly Color commonColor;
+    readonly Color rareColor;
+    readonly Color epicColor;
+    readonly Color legendaryColor;
 
     private List<StatUpgrade> currentUpgrades;
 
-    private void Awake()
+    public void AddUpgradesToList(List<StatUpgrade> listToAddTo, int amountToAdd)
     {
-        instance = this;
-        currentUpgrades = new List<StatUpgrade>();
-        Hide();
-    }
-
-    private void Show(Hero hero, System.Action OnHide)
-    {
-        gameObject.SetActive(true);
-
-        if (statUpgrades.Count == 0)
-        {
-            Debug.LogWarning("0 UpgradeOptions in Levelupscreen... Hiding");
-            Hide();
-            return;
-        }
-
-        SetUpgrades(hero);
-        this.OnHide = OnHide;
-
-        Time.timeScale = 0f;
-    }
-
-    private void Hide()
-    {
-        Time.timeScale = 1f;
-        gameObject.SetActive(false);
-        OnHide.Invoke();
-    }
-
-    private void SetUpgrades(Hero hero)
-    {
-        currentUpgrades.Clear();
-        AddUpgradesToList(currentUpgrades);
-
-        for (int i = 0; i < upgradeOptions.Count; i++)
-        {
-            if (i == currentUpgrades.Count) break;
-
-            var configAndColor = GetConfigAndColor(currentUpgrades[i]);
-            upgradeOptions[i].SetUpgrade(hero, configAndColor.config, configAndColor.color);
-        }
-    }
-
-    private void AddUpgradesToList(List<StatUpgrade> listToAddTo)
-    {
-        for (int i = 0; i < upgradeOptions.Count; i++)
+        for (int i = 0; i < amountToAdd; i++)
         {
             if (statUpgrades.Count == i)
             {
@@ -86,7 +35,7 @@ public class LevelUpScreen : MonoBehaviour
 
         foreach (var upgrade in statUpgrades)
         {
-            ValueTuple<int, int> tuple = (totalWeight, 0); 
+            ValueTuple<int, int> tuple = (totalWeight, 0);
             totalWeight += upgrade.weight;
             tuple.Item2 = totalWeight - 1;
             upgradeDictionary.Add(upgrade, tuple);
@@ -127,7 +76,10 @@ public class LevelUpScreen : MonoBehaviour
         }
     }
 
-    private (StatModifierConfig config, Color color) GetConfigAndColor(StatUpgrade upgrade)
+    /// <summary>
+    /// Rolls rarity for a stat upgrade, Returns a tuple with modifier config and color for rarity
+    /// </summary>
+    public (StatModifierConfig config, Color color) RollRarity(StatUpgrade upgrade)
     {
         int common = upgrade.commonWeight;
         int rare = common + upgrade.rareWeight;
@@ -139,19 +91,23 @@ public class LevelUpScreen : MonoBehaviour
         StatModifierConfig config;
         Color rarityColor;
 
-        if (randomWeight <= common) {
+        if (randomWeight <= common)
+        {
             config = upgrade.common;
             rarityColor = commonColor;
         }
-        else if (randomWeight <= rare) {
+        else if (randomWeight <= rare)
+        {
             config = upgrade.rare;
             rarityColor = rareColor;
         }
-        else if (randomWeight <= epic) {
+        else if (randomWeight <= epic)
+        {
             config = upgrade.epic;
             rarityColor = epicColor;
         }
-        else if (randomWeight <= legendary) {
+        else if (randomWeight <= legendary)
+        {
             config = upgrade.legendary;
             rarityColor = legendaryColor;
         }
@@ -160,13 +116,12 @@ public class LevelUpScreen : MonoBehaviour
         return (config, rarityColor);
     }
 
-    public static void Show_Static(Hero hero, System.Action onHide)
+    public EndlessUpgradeHandler(List<StatUpgrade> statUpgrades, Color commonColor,Color rareColor, Color epicColor, Color legendaryColor)
     {
-        instance.Show(hero, onHide);
-    }
-
-    public static void Hide_Static()
-    {
-        instance.Hide();
+        this.statUpgrades = statUpgrades;
+        this.commonColor = commonColor;
+        this.rareColor = rareColor;
+        this.epicColor = epicColor;
+        this.legendaryColor = legendaryColor;
     }
 }

@@ -9,18 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d2dd90f1951f4ebe966f175a306d4d4, type: 3}
-  m_Name: Speed
+  m_Script: {fileID: 11500000, guid: 50beabbfc3f1f49c39e2d4e3b54fde11, type: 3}
+  m_Name: Speedo
   m_EditorClassIdentifier: 
-  upgradeName: Speed
+  itemName: Speedo
   type: 3
   operatorType: 0
-  weight: 10
-  commonValue: 0.1
-  rareValue: 0.2
-  epicValue: 0.3
-  legendaryValue: 0.5
-  commonWeight: 50
-  rareWeight: 38
-  epicWeight: 10
-  legendaryWeight: 2
+  value: 1
+  stackValue: 0
+  maxStacks: 3
+  weight: 0
+  color: {r: 1, g: 0.495283, b: 0.8530179, a: 1}

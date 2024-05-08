@@ -50,15 +50,6 @@ public class Hero : Unit, IVisitable
         {
             this.GetComponent<PlayerMovementHandler>().ModifySpeed();
         }
-        
-
-        
-    }
-
-    private void Awake()
-    {
-        // Temporary
-        Init();
     }
 
     public void AddExperience(int amount)
@@ -86,9 +77,9 @@ public class Hero : Unit, IVisitable
             if (collider == null) continue;
 
             float distanceToPickup = (transform.position - collider.transform.position).magnitude;
-            float pickupAttractionDelta = Helpers.Map(distanceToPickup, 0f, Stats.Magnet, 1f, 4f, false);
+            float pickupAttractionDivisor = Helpers.Map(distanceToPickup, 0f, Stats.Magnet, 1f, 4f, false);
 
-            collider.transform.position = Vector3.MoveTowards(collider.transform.position, transform.position, 1f / pickupAttractionDelta);
+            collider.transform.position = Vector3.MoveTowards(collider.transform.position, transform.position, 1f / pickupAttractionDivisor);
         }
     }
 

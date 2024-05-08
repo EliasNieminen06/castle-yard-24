@@ -10,6 +10,7 @@ public class StatModifierPickupBase : ScriptableObject
     public float duration;
     public bool stackable;
     public float stackValue;
+    public int maxStacks;
     public bool refreshable;
     public bool timeStackable;
 
@@ -17,6 +18,6 @@ public class StatModifierPickupBase : ScriptableObject
 
     private void OnEnable()
     {
-        config = new StatModifierConfig(modifierName, type, operatorType, value, duration, stackable, stackValue, refreshable, timeStackable);
+        config = new StatModifierConfig(modifierName, type, operatorType, value, duration, stackable, stackValue, maxStacks, refreshable, timeStackable);
     }
 }

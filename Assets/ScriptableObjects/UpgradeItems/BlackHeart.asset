@@ -9,16 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42ce0fa4f1e458583e38128d378a02, type: 3}
-  m_Name: MagnetBuff
+  m_Script: {fileID: 11500000, guid: 50beabbfc3f1f49c39e2d4e3b54fde11, type: 3}
+  m_Name: BlackHeart
   m_EditorClassIdentifier: 
-  modifierName: TemporaryMagnetRangeBuff
-  type: 4
-  operatorType: 0
-  value: 50
-  duration: 5
-  stackable: 0
-  stackValue: 0
-  maxStacks: 0
-  refreshable: 1
-  timeStackable: 0
+  itemName: BlackHeart
+  type: 0
+  operatorType: 1
+  value: 1.1
+  stackValue: 0.1
+  maxStacks: 5
+  weight: 1
+  color: {r: 0.1792453, g: 0, b: 0, a: 1}

@@ -55,6 +55,26 @@ public class StatsMediator
         }
     }
 
+    public int GetModifierStacks(string name)
+    {
+        if (name == null) return 0;
+
+        StatModifier modifier = null;
+
+        foreach (var mod in modifiers)
+        {
+            if (mod.config.name == name)
+            {
+                modifier = mod;
+                break;
+            }
+        }
+
+        if (modifier == null) return 0;
+
+        return modifier.stacks;   
+    }
+
     private void ModifiersChanged(object sender, ModifierChangedArgs args)
     {
         OnModifierChanged.Invoke(sender, args);
