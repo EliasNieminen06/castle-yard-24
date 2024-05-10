@@ -47,8 +47,11 @@ public class LevelUpScreen : MonoBehaviour
             throw new NullReferenceException("0 StatUpgrades Available");
         }
 
+        //upgradeOptions.ForEach((upgradeOption) => upgradeOption.gameObject.SetActive(true));
+
         if (!itemHandler.ItemsMaxed(hero)) SetItems(hero);
         else SetUpgrades(hero);
+
         this.OnHide = OnHide;
 
         Time.timeScale = 0f;
@@ -82,9 +85,13 @@ public class LevelUpScreen : MonoBehaviour
         currentItems.Clear();
         itemHandler.AddItemsToList(currentItems, upgradeOptions.Count);
 
-        for (int i = 0; i < currentItems.Count; i++)
+        for (int i = 0; i < upgradeOptions.Count; i++)
         {
-            if (i == upgradeOptions.Count) break;
+            if (i == currentItems.Count)
+            {
+                upgradeOptions[i].gameObject.SetActive(false);
+                break;
+            }
 
             UpgradeItem item = currentItems[i];
 
@@ -94,8 +101,7 @@ public class LevelUpScreen : MonoBehaviour
                     itemHandler.RemoveItemFromDrawPool(item);
                 }
 
-                if (!itemHandler.itemInventory.Contains(item))
-                    itemHandler.AddItemToInventory(item);
+                if (!itemHandler.itemInventory.Contains(item)) itemHandler.AddItemToInventory(item);
 
                 Debug.Log(item.modifierConfig.name + " " + stacks);
             });

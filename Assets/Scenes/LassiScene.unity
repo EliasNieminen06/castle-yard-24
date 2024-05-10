@@ -8411,6 +8411,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 398462536}
+    - target: {fileID: 4773811312507831664, guid: 10b6b84974b0544b89174af1f49baea2, type: 3}
+      propertyPath: upgradeItems.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4773811312507831664, guid: 10b6b84974b0544b89174af1f49baea2, type: 3}
+      propertyPath: upgradeItems.Array.data[4]
+      value: 
+      objectReference: {fileID: 11400000, guid: 21b0262c7027c4f1fb75bf1b24035716, type: 2}
+    - target: {fileID: 4773811312507831664, guid: 10b6b84974b0544b89174af1f49baea2, type: 3}
+      propertyPath: upgradeItems.Array.data[5]
+      value: 
+      objectReference: {fileID: 11400000, guid: 154f339b3ae484e22bc3d0871f6a87d9, type: 2}
     - target: {fileID: 5275542056629674051, guid: 10b6b84974b0544b89174af1f49baea2, type: 3}
       propertyPath: m_Pivot.x
       value: 0

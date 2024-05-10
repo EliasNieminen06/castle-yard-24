@@ -18,5 +18,5 @@ MonoBehaviour:
   value: 20
   stackValue: 0
   maxStacks: 5
-  weight: 1
+  weight: 100
   color: {r: 1, g: 0.6745283, b: 0.6745283, a: 1}

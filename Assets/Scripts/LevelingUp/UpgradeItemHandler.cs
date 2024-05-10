@@ -5,7 +5,6 @@ using UnityEngine;
 public class UpgradeItemHandler
 {
     readonly int maxItems;
-    readonly List<UpgradeItem> upgradeItems;
     public List<UpgradeItem> itemInventory { get; private set; }
     private List<UpgradeItem> itemDrawPool;
 
@@ -27,23 +26,34 @@ public class UpgradeItemHandler
     public void AddItemToInventory(UpgradeItem item)
     {
         itemInventory.Add(item);
+        //Debug.Log($"Added {item.modifierConfig.name} to inventory, Items in inventoy: {itemInventory.Count}, Inventory capacity: {maxItems}");
 
         if (itemInventory.Count == maxItems)
         {
-            foreach (var upgradeItem in itemDrawPool)
-            {
-                if (!itemInventory.Contains(item)) RemoveItemFromDrawPool(upgradeItem);
-            }
+           //Debug.Log("Inventory Maxed Removing other items from draw pool");
+           //foreach (var upgradeItem in itemDrawPool.ToArray())
+           //{
+           //    if (itemInventory.Contains(upgradeItem)) continue;
+           //
+           //    RemoveItemFromDrawPool(upgradeItem);
+           //    Debug.Log("Removed " + upgradeItem + " From DrawPool");
+           //}
+
+            itemDrawPool.RemoveAll(upgradeItem => !itemInventory.Contains(upgradeItem));
         }
     }
 
     public void RemoveItemFromDrawPool(UpgradeItem item)
     {
-        if (itemDrawPool.Contains(item)) itemDrawPool.Remove(item);
+        if (itemDrawPool.Contains(item))
+        {
+            itemDrawPool.Remove(item);
+            //Debug.Log("Removed " + item + " From DrawPool");
+        }
     }
     public void AddItemToDrawPool(UpgradeItem item)
     {
-        if (itemInventory.Count == maxItems) return;
+        if (itemInventory.Count >= maxItems) return;
         if (!itemDrawPool.Contains(item)) itemDrawPool.Add(item);
     }
 
@@ -82,9 +92,10 @@ public class UpgradeItemHandler
             randomWeight = UnityEngine.Random.Range(0, totalWeight);
             //Debug.Log("Trying to get upgrade with a weight of: " + randomWeight);
             item = GetUpgradeWithWeight(randomWeight);
+            if (listToAddTo.Count == itemDrawPool.Count) break;
         }
 
-        //Debug.Log("Got Upgrade: " + currentUpgrade);
+        //Debug.Log("Got Upgrade: " + item);
         return item;
 
         UpgradeItem GetUpgradeWithWeight(int weight)
@@ -110,7 +121,6 @@ public class UpgradeItemHandler
 
     public UpgradeItemHandler(List<UpgradeItem> upgradeItems, int maxItems)
     {
-        this.upgradeItems = upgradeItems;
         this.maxItems = maxItems;
 
         itemDrawPool = new List<UpgradeItem>();

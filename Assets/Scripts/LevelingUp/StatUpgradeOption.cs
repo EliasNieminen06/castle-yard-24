@@ -10,6 +10,8 @@ public class StatUpgradeOption : MonoBehaviour
 
     public void SetUpgrade(Hero hero, StatModifierConfig modifierConfig, Color backgroundColor, System.Action<int> OnApply)
     {
+        gameObject.SetActive(true);
+
         background.color = backgroundColor;
         upgradeNameText.text = $"{modifierConfig.type} + {modifierConfig.value}";
 
