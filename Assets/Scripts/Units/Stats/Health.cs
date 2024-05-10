@@ -90,5 +90,5 @@ public class Health
     //    currentTemporaryHp = amount;
     //}
 
-    public override string ToString() => $"Hp {currentHp}/{stats.MaxHp}";
+    public override string ToString() => $"Hp {MathF.Round(currentHp, 2)}/{stats.MaxHp}";
 }

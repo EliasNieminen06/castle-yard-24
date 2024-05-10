@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class Unit : Entity, IDamageable
 {
@@ -60,6 +59,16 @@ public abstract class Unit : Entity, IDamageable
 
     public void TakeDamage(float damageAmount)
     {
-        Health.ReduceHp(damageAmount);
+        bool dodge = Random.Range(0, 100) < Stats.Dodge;
+        if (dodge)
+        {
+            Debug.Log("Dodged");
+            return;
+        }
+
+        float damageToTake = DamageCalculator.CalculateDamage(damageAmount, Stats.Defense);
+        Debug.Log($"Took {damageToTake} damage");
+
+        Health.ReduceHp(damageToTake);
     }
 }
