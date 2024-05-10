@@ -27,19 +27,37 @@ public abstract class Unit : Entity, IDamageable
     {
         if (args.modifier == null) return;
 
+        // ???
+
         if (args.modifier.config.type == StatType.MaxHp)
         {
             if (args.change == ModifierChangedArgs.Change.Added)
             {
-                Health.AddHp(args.modifier.config.value);
+                if (args.modifier.config.operatorType == StatModifier.OperatorType.Add)
+                {
+                    Health.AddHp(args.modifier.config.value);
+                }
+                else
+                {
+                    Health.AddHp(Health.currentHp * 1 + args.modifier.config.stackValue);
+                }
             }
             else if (args.change == ModifierChangedArgs.Change.Modified && args.modifier.config.stackable)
             {
-                Health.AddHp(args.modifier.config.value);
+                if (args.modifier.config.operatorType == StatModifier.OperatorType.Add)
+                {
+                    Health.AddHp(args.modifier.config.value);
+                }
+                else
+                {
+                    Health.AddHp(Health.currentHp * 1 + args.modifier.config.stackValue);
+                }
             }
 
             Health.UpdateHp();
         }
+
+        // ???
     }
 
     public virtual void Update()
