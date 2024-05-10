@@ -54,7 +54,10 @@ public class Hero : Unit, IVisitable
 
     public void AddExperience(int amount)
     {
-        Levels.AddExperience(amount);
+        float newAmount = amount * ((float)Stats.ExpBonus / 100 + 1);
+        int roundedAmount = Mathf.RoundToInt(newAmount);
+        Levels.AddExperience(roundedAmount);
+        //Debug.Log("Added " + roundedAmount + " xp");
     }
 
     public override void Update()

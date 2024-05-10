@@ -20,3 +20,4 @@ MonoBehaviour:
   cooldownReduction: 0
   areaOfEffect: 100
   dodge: 0
+  expBonus: 0

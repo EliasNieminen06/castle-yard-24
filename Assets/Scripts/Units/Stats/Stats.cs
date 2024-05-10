@@ -9,8 +9,10 @@ public enum StatType
     Speed,
     Magnet,
     [Tooltip("Precentage 1 = 100%")] CooldownReduction,
-    [Tooltip("Precentage 1 = 100%")] AreaOfEffect,
+    [Tooltip("Precentage")] AreaOfEffect,
     [Tooltip("Precentage 1 = 100%")] Dodge,
+    [Tooltip("Precentage")] ExpBonus,
+
 }
 
 public class Stats
@@ -79,40 +81,59 @@ public class Stats
     /// <summary>
     /// 0% - 75%
     /// </summary>
-    public float CooldownReduction
+    public int CooldownReduction
     {
         get
         {
             // Return value with modifiers applied
             var q = new Query(StatType.CooldownReduction, baseStats.cooldownReduction);
             mediator.PerformQuery(this, q);
-            float clampedValue = Mathf.Clamp(q.Value, 0, 75);
+            int roundedValue = Mathf.FloorToInt(q.Value);
+            int clampedValue = Mathf.Clamp(roundedValue, 0, 75);
             return clampedValue;
         }
     }
-
-    public float AreaOfEffect
+    /// <summary>
+    /// Precentage
+    /// </summary>
+    public int AreaOfEffect
     {
         get
         {
             // Return value with modifiers applied
             var q = new Query(StatType.AreaOfEffect, baseStats.areaOfEffect);
             mediator.PerformQuery(this, q);
-            return q.Value;
+            int roundedValue = Mathf.FloorToInt(q.Value);
+            return roundedValue;
         }
     }
     /// <summary>
     /// 0% - 75%
     /// </summary>
-    public float Dodge
+    public int Dodge
     {
         get
         {
             // Return value with modifiers applied
             var q = new Query(StatType.Dodge, baseStats.dodge);
             mediator.PerformQuery(this, q);
-            float clampedValue = Mathf.Clamp(q.Value, 0, 75);
+            int roundedValue = Mathf.FloorToInt(q.Value);
+            int clampedValue = Mathf.Clamp(roundedValue, 0, 75);
             return clampedValue;
+        }
+    }
+    /// <summary>
+    /// Precentage
+    /// </summary>
+    public int ExpBonus
+    {
+        get
+        {
+            // Return value with modifiers applied
+            var q = new Query(StatType.ExpBonus, baseStats.expBonus);
+            mediator.PerformQuery(this, q);
+            int roundedValue = Mathf.FloorToInt(q.Value);
+            return roundedValue;
         }
     }
 
@@ -122,5 +143,5 @@ public class Stats
         this.baseStats = baseStats;
     }
 
-    public override string ToString() => $"Attack: {Attack}, Defense: {Defense}, Speed: {Math.Round(Speed, 1)}, Magnet: {Math.Round(Magnet, 1)}, CDR: {CooldownReduction}%, AOE: {AreaOfEffect}%, Dodge: {Dodge}%";
+    public override string ToString() => $"Attack: {Attack}, Defense: {Defense}, Speed: {Math.Round(Speed, 1)}, Magnet: {Math.Round(Magnet, 1)}, CDR: {CooldownReduction}%, AOE: {AreaOfEffect}%, Dodge: {Dodge}%, Exp+: {ExpBonus}%";
 }
