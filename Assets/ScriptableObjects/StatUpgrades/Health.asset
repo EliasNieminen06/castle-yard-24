@@ -15,11 +15,15 @@ MonoBehaviour:
   upgradeName: MaxHp
   type: 0
   operatorType: 0
-  weight: 30
+  weight: 100
   commonValue: 2
   rareValue: 3
   epicValue: 5
   legendaryValue: 10
+  commonValueString: 
+  rareValueString: 
+  epicValueString: 
+  legendaryValueString: 
   commonWeight: 50
   rareWeight: 38
   epicWeight: 10

@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d2dd90f1951f4ebe966f175a306d4d4, type: 3}
-  m_Name: Attack
+  m_Name: AOE
   m_EditorClassIdentifier: 
-  upgradeName: Attack
-  type: 1
+  upgradeName: AOE
+  type: 6
   operatorType: 0
-  weight: 100
-  commonValue: 1
-  rareValue: 2
-  epicValue: 3
+  weight: 30
+  commonValue: 0
+  rareValue: 1
+  epicValue: 2
   legendaryValue: 5
   commonValueString: 
-  rareValueString: 
-  epicValueString: 
-  legendaryValueString: 
-  commonWeight: 50
+  rareValueString: 1%
+  epicValueString: 2%
+  legendaryValueString: 5%
+  commonWeight: 0
   rareWeight: 38
   epicWeight: 10
   legendaryWeight: 2

@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50beabbfc3f1f49c39e2d4e3b54fde11, type: 3}
-  m_Name: SmolSword
+  m_Name: Black Heart
   m_EditorClassIdentifier: 
-  itemName: Smol Sword
-  type: 1
+  itemName: Black Heart
+  type: 0
   operatorType: 0
-  value: 10
+  value: 20
   stackValue: 0
   maxStacks: 5
   weight: 100
-  color: {r: 0.735849, g: 0.13536847, b: 0.1823128, a: 1}
+  color: {r: 0.1509434, g: 0, b: 0, a: 1}
+  valueString: 20 HP

@@ -5,14 +5,14 @@ using UnityEngine;
 public class UpgradeItemHandler
 {
     readonly int maxItems;
-    public List<UpgradeItem> itemInventory { get; private set; }
+    public List<UpgradeItem> itemsInInventory { get; private set; }
     private List<UpgradeItem> itemDrawPool;
 
     public bool ItemsMaxed (Hero hero)
     {
-        if (itemInventory.Count < maxItems) return false;
+        if (itemsInInventory.Count < maxItems) return false;
 
-        foreach (var item in itemInventory)
+        foreach (var item in itemsInInventory)
         {
             if (hero.Stats.Mediator.GetModifierStacks(item.modifierConfig.name) < item.modifierConfig.maxStacks)
             {
@@ -25,10 +25,10 @@ public class UpgradeItemHandler
 
     public void AddItemToInventory(UpgradeItem item)
     {
-        itemInventory.Add(item);
+        itemsInInventory.Add(item);
         //Debug.Log($"Added {item.modifierConfig.name} to inventory, Items in inventoy: {itemInventory.Count}, Inventory capacity: {maxItems}");
 
-        if (itemInventory.Count == maxItems)
+        if (itemsInInventory.Count == maxItems)
         {
            //Debug.Log("Inventory Maxed Removing other items from draw pool");
            //foreach (var upgradeItem in itemDrawPool.ToArray())
@@ -39,7 +39,7 @@ public class UpgradeItemHandler
            //    Debug.Log("Removed " + upgradeItem + " From DrawPool");
            //}
 
-            itemDrawPool.RemoveAll(upgradeItem => !itemInventory.Contains(upgradeItem));
+            itemDrawPool.RemoveAll(upgradeItem => !itemsInInventory.Contains(upgradeItem));
         }
     }
 
@@ -53,7 +53,7 @@ public class UpgradeItemHandler
     }
     public void AddItemToDrawPool(UpgradeItem item)
     {
-        if (itemInventory.Count >= maxItems) return;
+        if (itemsInInventory.Count >= maxItems) return;
         if (!itemDrawPool.Contains(item)) itemDrawPool.Add(item);
     }
 
@@ -124,7 +124,7 @@ public class UpgradeItemHandler
         this.maxItems = maxItems;
 
         itemDrawPool = new List<UpgradeItem>();
-        itemInventory = new List<UpgradeItem>();
+        itemsInInventory = new List<UpgradeItem>();
 
         foreach (var item in upgradeItems)
         {

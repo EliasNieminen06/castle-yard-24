@@ -13,11 +13,12 @@ public class StatModifierPickupBase : ScriptableObject
     public int maxStacks;
     public bool refreshable;
     public bool timeStackable;
+    public string valueString;
 
     public StatModifierConfig config { get; private set; }
 
     private void OnEnable()
     {
-        config = new StatModifierConfig(modifierName, type, operatorType, value, duration, stackable, stackValue, maxStacks, refreshable, timeStackable);
+        config = new StatModifierConfig(modifierName, type, operatorType, value, duration, stackable, stackValue, maxStacks, refreshable, timeStackable, valueString);
     }
 }

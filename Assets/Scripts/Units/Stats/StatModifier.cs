@@ -172,10 +172,12 @@ public struct StatModifierConfig
     public readonly bool refreshable;
     public readonly bool timeStackable;
 
+    public readonly string valueString;
+
     /// <summary>
     /// Used for Pickups
     /// </summary>
-    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value, float duration, bool stackable, float stackValue, int maxStacks, bool refreshable, bool timeStackable)
+    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value, float duration, bool stackable, float stackValue, int maxStacks, bool refreshable, bool timeStackable, string valueString)
     {
         this.name = name;
         this.type = type;
@@ -187,12 +189,17 @@ public struct StatModifierConfig
         this.maxStacks = maxStacks;
         this.refreshable = refreshable;
         this.timeStackable = timeStackable;
+ 
+        if (valueString == "") valueString = value.ToString();
+
+        this.valueString = valueString;
+
     }
 
     /// <summary>
     /// Used for Items
     /// </summary>
-    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value, float stackValue, int maxStacks)
+    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value, float stackValue, int maxStacks, string valueString)
     {
         this.name = name;
         this.type = type;
@@ -204,12 +211,16 @@ public struct StatModifierConfig
         this.maxStacks = maxStacks;
         this.refreshable = false;
         this.timeStackable = false;
+
+        if (valueString == "") valueString = value.ToString();
+
+        this.valueString = valueString;
     }
 
     /// <summary>
     /// Used for endless stat upgrades
     /// </summary>
-    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value)
+    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value, string valueString)
     {
         this.name = name;
         this.type = type;
@@ -221,5 +232,9 @@ public struct StatModifierConfig
         this.maxStacks = 0;
         this.refreshable = false;
         this.timeStackable = false;
+
+        if (valueString == "") valueString = value.ToString();
+
+        this.valueString = valueString;
     }
 }

@@ -18,5 +18,8 @@ MonoBehaviour:
   value: 2
   duration: 5
   stackable: 0
+  stackValue: 0
+  maxStacks: 0
   refreshable: 1
   timeStackable: 0
+  valueString: 

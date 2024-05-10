@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: PlayerStats
   m_EditorClassIdentifier: 
   maxHp: 100
-  attack: 10
-  defense: 5
+  attack: 25
+  defense: 15
   speed: 4
-  magnet: 1.5
+  magnet: 1
+  cooldownReduction: 0
+  areaOfEffect: 100
+  dodge: 0

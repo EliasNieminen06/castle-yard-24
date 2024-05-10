@@ -12,11 +12,12 @@ public class UpgradeItem : ScriptableObject
     public int maxStacks;
     public int weight;
     public Color color;
+    public string valueString;
 
     [HideInInspector] public StatModifierConfig modifierConfig;
 
     private void OnEnable()
     {
-        modifierConfig = new StatModifierConfig(itemName, type, operatorType, value, stackValue, maxStacks);
+        modifierConfig = new StatModifierConfig(itemName, type, operatorType, value, stackValue, maxStacks, valueString);
     }
 }

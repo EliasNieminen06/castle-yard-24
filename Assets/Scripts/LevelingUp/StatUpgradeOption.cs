@@ -8,12 +8,14 @@ public class StatUpgradeOption : MonoBehaviour
     [SerializeField] private Button upgradeButton;
     [SerializeField] private Image background;
 
-    public void SetUpgrade(Hero hero, StatModifierConfig modifierConfig, Color backgroundColor, System.Action<int> OnApply)
+    public void SetUpgrade(Hero hero, StatModifierConfig modifierConfig, Color backgroundColor, bool showStatInsteadOfName, System.Action<int> OnApply)
     {
         gameObject.SetActive(true);
 
         background.color = backgroundColor;
-        upgradeNameText.text = $"{modifierConfig.type} + {modifierConfig.value}";
+
+        if (showStatInsteadOfName) upgradeNameText.text = $"{modifierConfig.type} + {modifierConfig.valueString}";
+        else upgradeNameText.text = $"{modifierConfig.name} + {modifierConfig.valueString}";
 
         upgradeButton.onClick.RemoveAllListeners();
         upgradeButton.onClick.AddListener(() =>

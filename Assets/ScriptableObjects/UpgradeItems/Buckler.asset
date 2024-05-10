@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50beabbfc3f1f49c39e2d4e3b54fde11, type: 3}
-  m_Name: BigFuckingSwor
+  m_Name: Buckler
   m_EditorClassIdentifier: 
-  itemName: BigFuckingSwor
-  type: 1
+  itemName: Buckler
+  type: 2
   operatorType: 0
-  value: 20
+  value: 10
   stackValue: 0
   maxStacks: 5
   weight: 100
-  color: {r: 1, g: 0.6745283, b: 0.6745283, a: 1}
+  color: {r: 0.5, g: 0.3408019, b: 0.18160376, a: 1}
+  valueString: 10 DEF

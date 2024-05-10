@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50beabbfc3f1f49c39e2d4e3b54fde11, type: 3}
-  m_Name: HugeMagnet
+  m_Name: StrengthPill
   m_EditorClassIdentifier: 
-  itemName: HugeMagnet
-  type: 4
-  operatorType: 0
-  value: 1
-  stackValue: 0
+  itemName: StrengthPill
+  type: 1
+  operatorType: 1
+  value: 1.1
+  stackValue: 0.1
   maxStacks: 5
   weight: 100
-  color: {r: 0.3820755, g: 0.50827235, b: 1, a: 1}
+  color: {r: 0.26415092, g: 0.031149868, b: 0.031149868, a: 1}
+  valueString: 10% ATK

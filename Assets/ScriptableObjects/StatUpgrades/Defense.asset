@@ -15,11 +15,15 @@ MonoBehaviour:
   upgradeName: Defense
   type: 2
   operatorType: 0
-  weight: 50
-  commonValue: 2
-  rareValue: 4
-  epicValue: 7
-  legendaryValue: 15
+  weight: 100
+  commonValue: 1
+  rareValue: 2
+  epicValue: 3
+  legendaryValue: 5
+  commonValueString: 
+  rareValueString: 
+  epicValueString: 
+  legendaryValueString: 
   commonWeight: 50
   rareWeight: 38
   epicWeight: 10

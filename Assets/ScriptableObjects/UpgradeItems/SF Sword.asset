@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50beabbfc3f1f49c39e2d4e3b54fde11, type: 3}
-  m_Name: Speedo
+  m_Name: SF Sword
   m_EditorClassIdentifier: 
-  itemName: Speedo
-  type: 3
-  operatorType: 1
-  value: 1.2
-  stackValue: 0.2
-  maxStacks: 3
-  weight: 50
-  color: {r: 1, g: 0.495283, b: 0.8530179, a: 1}
-  valueString: 20% SPD
+  itemName: SF Sword
+  type: 1
+  operatorType: 0
+  value: 6
+  stackValue: 0
+  maxStacks: 10
+  weight: 100
+  color: {r: 0.8867924, g: 0.30535775, b: 0.34716034, a: 1}
+  valueString: 6 ATK

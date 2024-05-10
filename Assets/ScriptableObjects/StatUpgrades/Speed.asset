@@ -16,11 +16,15 @@ MonoBehaviour:
   type: 3
   operatorType: 0
   weight: 10
-  commonValue: 0.1
-  rareValue: 0.2
-  epicValue: 0.3
+  commonValue: 0
+  rareValue: 0
+  epicValue: 0.2
   legendaryValue: 0.5
-  commonWeight: 50
-  rareWeight: 38
-  epicWeight: 10
+  commonValueString: 
+  rareValueString: 
+  epicValueString: 
+  legendaryValueString: 
+  commonWeight: 0
+  rareWeight: 0
+  epicWeight: 8
   legendaryWeight: 2

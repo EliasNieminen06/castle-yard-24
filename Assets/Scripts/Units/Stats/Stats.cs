@@ -77,7 +77,7 @@ public class Stats
     }
 
     /// <summary>
-    /// 0% - 100%
+    /// 0% - 75%
     /// </summary>
     public float CooldownReduction
     {
@@ -86,8 +86,33 @@ public class Stats
             // Return value with modifiers applied
             var q = new Query(StatType.CooldownReduction, baseStats.cooldownReduction);
             mediator.PerformQuery(this, q);
-            float newValue = 100 * q.Value / (q.Value + 100);
+            float clampedValue = Mathf.Clamp(q.Value, 0, 75);
+            return clampedValue;
+        }
+    }
+
+    public float AreaOfEffect
+    {
+        get
+        {
+            // Return value with modifiers applied
+            var q = new Query(StatType.AreaOfEffect, baseStats.areaOfEffect);
+            mediator.PerformQuery(this, q);
             return q.Value;
+        }
+    }
+    /// <summary>
+    /// 0% - 75%
+    /// </summary>
+    public float Dodge
+    {
+        get
+        {
+            // Return value with modifiers applied
+            var q = new Query(StatType.Dodge, baseStats.dodge);
+            mediator.PerformQuery(this, q);
+            float clampedValue = Mathf.Clamp(q.Value, 0, 75);
+            return clampedValue;
         }
     }
 
@@ -97,5 +122,5 @@ public class Stats
         this.baseStats = baseStats;
     }
 
-    public override string ToString() => $"Attack: {Attack}, Defense: {Defense}, Speed: {Math.Round(Speed, 2)}, Magnet: {Math.Round(Magnet, 2)}, CDR: {CooldownReduction}";
+    public override string ToString() => $"Attack: {Attack}, Defense: {Defense}, Speed: {Math.Round(Speed, 1)}, Magnet: {Math.Round(Magnet, 1)}, CDR: {CooldownReduction}%, AOE: {AreaOfEffect}%, Dodge: {Dodge}%";
 }

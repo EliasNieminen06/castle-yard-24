@@ -102,7 +102,7 @@ public class StatsMediator
         }
 
         // Dispose modifier if marked for removal
-        for (int i = 0; i < modifiers.Count; i++)
+        for (int i = modifiers.Count - 1; i >= 0; i--)
         {
             var modifier = modifiers[i];
 

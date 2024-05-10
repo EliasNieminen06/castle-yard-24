@@ -7,6 +7,8 @@ public class LevelUpScreen : MonoBehaviour
 {
     private static LevelUpScreen instance;
 
+    [SerializeField] ItemInventory inventory;
+
     //[SerializeField] private List<BaseStatModifier> statModifiers;
     [SerializeField] private List<UpgradeItem> upgradeItems;
     [SerializeField] private List<StatUpgrade> endlessUpgrades;
@@ -33,7 +35,8 @@ public class LevelUpScreen : MonoBehaviour
         currentUpgrades = new List<StatUpgrade>();
         currentItems = new List<UpgradeItem>();
         endlessUpgradeHandler = new EndlessUpgradeHandler(endlessUpgrades, commonColor, rareColor, epicColor, legendaryColor);
-        itemHandler = new UpgradeItemHandler(upgradeItems, 3);
+        itemHandler = new UpgradeItemHandler(upgradeItems, 5);
+        inventory.Init(5);
         Hide();
     }
 
@@ -74,7 +77,7 @@ public class LevelUpScreen : MonoBehaviour
             if (i == currentUpgrades.Count) break;
 
             var rarity = endlessUpgradeHandler.RollRarity(currentUpgrades[i]);
-            upgradeOptions[i].SetUpgrade(hero, rarity.config, rarity.color, (int stacks) => {
+            upgradeOptions[i].SetUpgrade(hero, rarity.config, rarity.color, true, (int stacks) => {
                 Debug.Log(rarity.config.name + " " + stacks);
             });
         }
@@ -95,13 +98,19 @@ public class LevelUpScreen : MonoBehaviour
 
             UpgradeItem item = currentItems[i];
 
-            upgradeOptions[i].SetUpgrade(hero, item.modifierConfig, item.color, (int stacks) => {
+            upgradeOptions[i].SetUpgrade(hero, item.modifierConfig, item.color, false, (int stacks) => {
                 if (stacks >= item.modifierConfig.maxStacks)
                 {
                     itemHandler.RemoveItemFromDrawPool(item);
                 }
 
-                if (!itemHandler.itemInventory.Contains(item)) itemHandler.AddItemToInventory(item);
+                if (!itemHandler.itemsInInventory.Contains(item))
+                {
+                    itemHandler.AddItemToInventory(item);
+                    inventory.AddItemToInventory(item);
+                }
+
+                inventory.UpdateItem(item, hero);
 
                 Debug.Log(item.modifierConfig.name + " " + stacks);
             });
