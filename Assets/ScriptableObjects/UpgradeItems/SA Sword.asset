@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50beabbfc3f1f49c39e2d4e3b54fde11, type: 3}
-  m_Name: SF Sword
+  m_Name: SA Sword
   m_EditorClassIdentifier: 
-  itemName: SF Sword
+  itemName: SA Sword
   type: 1
   operatorType: 0
   value: 6

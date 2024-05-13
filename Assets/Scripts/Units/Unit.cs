@@ -6,6 +6,9 @@ public abstract class Unit : Entity, IDamageable
     public Stats Stats { get; private set; }
     public Health Health { get; private set; }
 
+    [SerializeField] private GameObject hpBarPrefab;
+    private HpBar hpBar;
+
     public override void Init()
     {
         Stats = new Stats(new StatsMediator(), baseStats);
@@ -15,12 +18,16 @@ public abstract class Unit : Entity, IDamageable
         Health.OnHealthChanged += OnHealthChanged;
         OnModifiersChanged(this, new ModifierChangedArgs(null, default));
 
+        GameObject newHpBar = Instantiate(hpBarPrefab, GameManager.Instance.Canvas);
+        hpBar = newHpBar.GetComponent<HpBar>();
+        hpBar.Init(this.transform);
+
         base.Init();
     }
 
     protected virtual void OnHealthChanged()
     {
-
+        hpBar.UpdateVisual(Health.currentHp, Stats.MaxHp);
     }
 
     protected virtual void OnModifiersChanged(object sender, ModifierChangedArgs args)
