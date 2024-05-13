@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8d2dd90f1951f4ebe966f175a306d4d4, type: 3}
-  m_Name: AOE
+  m_Name: ExpBonus
   m_EditorClassIdentifier: 
-  upgradeName: AOE
-  type: 6
+  upgradeName: ExpBonus
+  type: 8
   operatorType: 0
   weight: 10
   commonValue: 0
-  rareValue: 1
-  epicValue: 2
-  legendaryValue: 5
+  rareValue: 2
+  epicValue: 5
+  legendaryValue: 10
   commonValueString: 
-  rareValueString: 1%
-  epicValueString: 2%
-  legendaryValueString: 5%
+  rareValueString: 2%
+  epicValueString: 5%
+  legendaryValueString: 10%
   commonWeight: 0
   rareWeight: 38
-  epicWeight: 10
+  epicWeight: 8
   legendaryWeight: 2

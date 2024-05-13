@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50beabbfc3f1f49c39e2d4e3b54fde11, type: 3}
-  m_Name: Huge Magnet
+  m_Name: Mega Magnet
   m_EditorClassIdentifier: 
-  itemName: Huge Magnet
+  itemName: Mega Magnet
   type: 4
   operatorType: 0
   value: 0.8
   stackValue: 0
   maxStacks: 5
-  weight: 50
+  weight: 75
   color: {r: 0.3820755, g: 0.50827235, b: 1, a: 1}
   valueString: 0.8 MGNT

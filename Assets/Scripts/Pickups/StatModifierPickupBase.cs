@@ -15,6 +15,8 @@ public class StatModifierPickupBase : ScriptableObject
     public bool timeStackable;
     public string valueString;
 
+    public Color color;
+
     public StatModifierConfig config { get; private set; }
 
     private void OnEnable()

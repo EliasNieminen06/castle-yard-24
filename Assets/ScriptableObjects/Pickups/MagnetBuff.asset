@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   modifierName: TemporaryMagnetRangeBuff
   type: 4
-  operatorType: 0
+  operatorType: 1
   value: 50
   duration: 5
   stackable: 0
@@ -22,3 +22,5 @@ MonoBehaviour:
   maxStacks: 0
   refreshable: 1
   timeStackable: 0
+  valueString: 50x
+  color: {r: 0.19483444, g: 0.18729973, b: 0.6509434, a: 1}

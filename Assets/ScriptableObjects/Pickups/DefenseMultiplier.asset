@@ -15,9 +15,12 @@ MonoBehaviour:
   modifierName: DefenseMultiplier
   type: 2
   operatorType: 1
-  value: 2
-  duration: 5
+  value: 5
+  duration: 10
   stackable: 0
   stackValue: 0
+  maxStacks: 0
   refreshable: 1
   timeStackable: 0
+  valueString: 5x
+  color: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 1}

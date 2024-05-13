@@ -18,5 +18,9 @@ MonoBehaviour:
   value: 1
   duration: 0
   stackable: 1
+  stackValue: 1
+  maxStacks: 0
   refreshable: 0
   timeStackable: 0
+  valueString: 1
+  color: {r: 0, g: 0.6132076, b: 0.015455541, a: 1}

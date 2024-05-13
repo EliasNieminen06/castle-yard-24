@@ -16,7 +16,11 @@ MonoBehaviour:
   type: 0
   operatorType: 0
   value: 10
-  duration: 0
+  duration: 5
   stackable: 1
+  stackValue: 10
+  maxStacks: 0
   refreshable: 1
   timeStackable: 1
+  valueString: 10
+  color: {r: 0.3018868, g: 0.21502315, b: 0.22273697, a: 1}

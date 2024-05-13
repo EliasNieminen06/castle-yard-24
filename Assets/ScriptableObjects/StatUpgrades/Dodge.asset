@@ -15,7 +15,7 @@ MonoBehaviour:
   upgradeName: Dodge
   type: 7
   operatorType: 0
-  weight: 5
+  weight: 2
   commonValue: 0
   rareValue: 0
   epicValue: 0

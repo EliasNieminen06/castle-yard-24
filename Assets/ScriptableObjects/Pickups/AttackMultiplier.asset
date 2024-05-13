@@ -22,4 +22,5 @@ MonoBehaviour:
   maxStacks: 0
   refreshable: 1
   timeStackable: 0
-  valueString: 
+  valueString: 2x
+  color: {r: 0.2924528, g: 0, b: 0, a: 1}
