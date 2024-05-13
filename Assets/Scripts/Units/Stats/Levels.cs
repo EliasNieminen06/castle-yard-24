@@ -1,4 +1,5 @@
 using System;
+using UnityEngine.UI;
 
 public class Levels
 {
@@ -9,6 +10,8 @@ public class Levels
     public int level { get; private set; } = 1;
     private int currentExperience;
     private int experienceToNextLevel;
+
+    private Image expBar;
 
     public event Action<int> OnLevelUp = delegate { };
 
@@ -23,6 +26,7 @@ public class Levels
             return true;
         }
 
+        RefreshExpBar();
         return false;
     }
 
@@ -32,6 +36,7 @@ public class Levels
         currentExperience = currentExperience - experienceToNextLevel;
         if (level >= levelScalingStartingLevel) experienceToNextLevel = baseExperienceRequiredToLevel + experienceRequirementAddedPerLevel * (level - levelScalingStartingLevel + 1);
         OnLevelUp.Invoke(level);
+        RefreshExpBar();
     }
 
     public void CheckExperience()
@@ -39,14 +44,22 @@ public class Levels
         if (currentExperience >= experienceToNextLevel) LevelUp();
     }
 
-    public Levels(int baseExperienceRequiredToLevel, int levelScalingStartingLevel, int experienceRequirementAddedPerLevel)
+    private void RefreshExpBar()
     {
+        expBar.fillAmount = Helpers.Map(currentExperience, 0, experienceToNextLevel, 0, 1, true);
+    }
+
+    public Levels(Image expBar, int baseExperienceRequiredToLevel, int levelScalingStartingLevel, int experienceRequirementAddedPerLevel)
+    {
+        this.expBar = expBar;
         this.baseExperienceRequiredToLevel = baseExperienceRequiredToLevel;
         this.levelScalingStartingLevel = levelScalingStartingLevel;
         this.experienceRequirementAddedPerLevel = experienceRequirementAddedPerLevel;
 
         currentExperience = 0;
         experienceToNextLevel = baseExperienceRequiredToLevel;
+
+        RefreshExpBar();
     }
 
     public override string ToString() => $"Level: {level} | Exp to next level: {experienceToNextLevel} | Current exp: {currentExperience}";

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Hero : Unit, IVisitable
 {
@@ -11,11 +12,12 @@ public class Hero : Unit, IVisitable
 
     public Levels Levels { get; private set; }
 
-    [SerializeField] LayerMask pickupLayer;
+    [SerializeField] private LayerMask pickupLayer;
+    [SerializeField] private Image expBar;
 
     public override void Init()
     {
-        Levels = new Levels(100, 10, 10);
+        Levels = new Levels(expBar, 100, 10, 10);
         Levels.OnLevelUp += OnLevelUp;
 
         base.Init();
