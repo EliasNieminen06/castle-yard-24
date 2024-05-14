@@ -126,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hpBar: {fileID: 8237906625854460017}
+  offset: {x: 0, y: -50}
 --- !u!1 &2597433972901090597
 GameObject:
   m_ObjectHideFlags: 0

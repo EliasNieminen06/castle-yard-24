@@ -9,15 +9,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50beabbfc3f1f49c39e2d4e3b54fde11, type: 3}
-  m_Name: Time Watch
+  m_Script: {fileID: 11500000, guid: 8073e8356b5de41bfa362c2d9f582469, type: 3}
+  m_Name: BasicEnemy
   m_EditorClassIdentifier: 
-  itemName: Time Watch
-  type: 5
-  operatorType: 0
-  value: 5
-  stackValue: 0
-  maxStacks: 10
-  weight: 25
-  color: {r: 0.31639373, g: 0.8490566, b: 0.6758657, a: 1}
-  valueString: 5% CDR
+  maxHp: 10
+  attack: 10
+  defense: 0
+  speed: 2
+  magnet: 0
+  cooldownReduction: 0
+  areaOfEffect: 0
+  dodge: 0
+  expBonus: 0

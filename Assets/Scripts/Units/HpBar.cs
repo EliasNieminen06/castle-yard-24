@@ -7,6 +7,7 @@ public class HpBar : MonoBehaviour
 {
     private Transform unitTransform;
     [SerializeField] private Image hpBar;
+    [SerializeField] private Vector2 offset;
 
     public void Init(Transform unitTransform)
     {
@@ -16,7 +17,7 @@ public class HpBar : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.position = Camera.main.WorldToScreenPoint(unitTransform.position);
+        transform.position = (Vector2)Camera.main.WorldToScreenPoint(unitTransform.position) + offset;
     }
 
     public void UpdateVisual(float currentHp, int maxHp)

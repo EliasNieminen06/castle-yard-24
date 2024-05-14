@@ -6,10 +6,6 @@ using UnityEngine.UI;
 
 public class Hero : Unit, IVisitable
 {
-    public TextMeshProUGUI statsText;
-    public TextMeshProUGUI levelsText;
-    public TextMeshProUGUI healthText;
-
     public Levels Levels { get; private set; }
 
     [SerializeField] private LayerMask pickupLayer;
@@ -26,29 +22,21 @@ public class Hero : Unit, IVisitable
     protected virtual void OnLevelUp(int level)
     {
         Health.SetHpToMax();
-        UpdateVisuals();
 
-        LevelUpScreen.Show_Static(this, () => { Levels.CheckExperience(); UpdateVisuals(); });
+        LevelUpScreen.Show_Static(this, () => { Levels.CheckExperience(); });
     }
 
     protected override void OnHealthChanged()
     {
         base.OnHealthChanged();
-        UpdateVisuals();
     }
 
     protected override void OnModifiersChanged(object sender, ModifierChangedArgs args)
     {
         base.OnModifiersChanged(sender, args);
-        UpdateVisuals();
-    }
+        StatsAndHealthText.UpdateTexts_Static();
 
-    private void UpdateVisuals()
-    {
-        statsText.text = Stats.ToString();
-        healthText.text = Health.ToString();
-
-        if(GetComponent<PlayerMovementHandler>() != null)
+        if (GetComponent<PlayerMovementHandler>() != null)
         {
             this.GetComponent<PlayerMovementHandler>().ModifySpeed();
         }
@@ -64,7 +52,6 @@ public class Hero : Unit, IVisitable
 
     public override void Update()
     {
-        levelsText.text = Levels.ToString();
         base.Update();
     }
 

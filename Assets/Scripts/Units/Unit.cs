@@ -18,16 +18,19 @@ public abstract class Unit : Entity, IDamageable
         Health.OnHealthChanged += OnHealthChanged;
         OnModifiersChanged(this, new ModifierChangedArgs(null, default));
 
-        GameObject newHpBar = Instantiate(hpBarPrefab, GameManager.Instance.Canvas);
-        hpBar = newHpBar.GetComponent<HpBar>();
-        hpBar.Init(this.transform);
+        if (hpBarPrefab != null)
+        {
+            GameObject newHpBar = Instantiate(hpBarPrefab, GameManager.Instance.Canvas);
+            hpBar = newHpBar.GetComponent<HpBar>();
+            hpBar.Init(this.transform);
+        }
 
         base.Init();
     }
 
     protected virtual void OnHealthChanged()
     {
-        hpBar.UpdateVisual(Health.currentHp, Stats.MaxHp);
+        if (hpBar != null) hpBar.UpdateVisual(Health.currentHp, Stats.MaxHp);
     }
 
     protected virtual void OnModifiersChanged(object sender, ModifierChangedArgs args)
@@ -87,13 +90,20 @@ public abstract class Unit : Entity, IDamageable
         bool dodge = Random.Range(0, 100) < Stats.Dodge;
         if (dodge)
         {
-            Debug.Log("Dodged");
+            //Debug.Log("Dodged");
             return;
         }
 
         float damageToTake = DamageCalculator.CalculateDamage(damageAmount, Stats.Defense);
-        Debug.Log($"Took {damageToTake} damage");
+        //Debug.Log($"Took {damageToTake} damage");
 
         Health.ReduceHp(damageToTake);
+
+        if (Health.currentHp <= 0) OnDeath();
+    }
+
+    protected virtual void OnDeath() {
+        Debug.Log("Unit.OnDeath " + this);
+        if (hpBar != null) Destroy(hpBar.gameObject);
     }
 }

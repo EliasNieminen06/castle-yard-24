@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50beabbfc3f1f49c39e2d4e3b54fde11, type: 3}
+  m_Name: Magic Watch
+  m_EditorClassIdentifier: 
+  itemName: Magic Watch
+  type: 5
+  operatorType: 0
+  value: 5
+  stackValue: 0
+  maxStacks: 10
+  weight: 25
+  color: {r: 0.31639373, g: 0.8490566, b: 0.6758657, a: 1}
+  valueString: 5% CDR
