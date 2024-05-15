@@ -35,8 +35,8 @@ public class LevelUpScreen : MonoBehaviour
         currentUpgrades = new List<StatUpgrade>();
         currentItems = new List<UpgradeItem>();
         endlessUpgradeHandler = new EndlessUpgradeHandler(endlessUpgrades, commonColor, rareColor, epicColor, legendaryColor);
-        itemHandler = new UpgradeItemHandler(upgradeItems, 5);
-        inventory.Init(5);
+        itemHandler = new UpgradeItemHandler(upgradeItems, 6);
+        inventory.Init(6);
         Hide();
     }
 

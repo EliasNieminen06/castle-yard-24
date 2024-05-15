@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+[DefaultExecutionOrder(-1)]
 public class StatsAndHealthText : MonoBehaviour
 {
     private static StatsAndHealthText instance;
