@@ -15,6 +15,11 @@ public class GameManager : MonoBehaviour
             Player = player;
             Canvas = canvas;
         }
+
+        foreach (var camera in FindObjectsOfType<Camera>())
+        {
+            if (camera != Camera.main) Destroy(camera.gameObject);
+        }
     }
 
     [SerializeField] private Transform player;

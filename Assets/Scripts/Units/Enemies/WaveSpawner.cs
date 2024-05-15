@@ -82,7 +82,7 @@ public class WaveSpawner : MonoBehaviour
 
         while (costLeft > 0)
         {
-            int randomEnemyIndex = Random.Range(0, enemySpawnPool.Count);
+            int randomEnemyIndex = UnityEngine.Random.Range(0, enemySpawnPool.Count);
             int randomEnemyCost = enemySpawnPool[randomEnemyIndex].cost;
 
             if (randomEnemyCost <= costLeft)
@@ -161,8 +161,8 @@ public class WaveSpawner : MonoBehaviour
 
     private Vector3 GetRandomSpawnPosition()
     {
-        float distance = Random.Range(7.5f, 20f);
-        Vector3 direction = new Vector3(Random.rotation.x, 0, Random.rotation.z).normalized;
+        float distance = UnityEngine.Random.Range(7.5f, 20f);
+        Vector3 direction = new Vector3(UnityEngine.Random.rotation.x, 0, UnityEngine.Random.rotation.z).normalized;
         Vector3 playerPosition = GameManager.Instance.Player.position;
         Vector3 spawnPosition = playerPosition + direction * distance;
         return spawnPosition;
