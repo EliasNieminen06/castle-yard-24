@@ -10,6 +10,7 @@ public class Hero : Unit, IVisitable
 
     [SerializeField] private LayerMask pickupLayer;
     [SerializeField] private Image expBar;
+    [SerializeField] private TextMeshProUGUI levelText;
 
     public override void Init()
     {
@@ -22,6 +23,7 @@ public class Hero : Unit, IVisitable
     protected virtual void OnLevelUp(int level)
     {
         Health.SetHpToMax();
+        levelText.text = "Lv: " + Levels.level;
 
         LevelUpScreen.Show_Static(this, () => { Levels.CheckExperience(); });
     }
