@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-[DefaultExecutionOrder(-10)]
+[DefaultExecutionOrder(-100)]
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-[DefaultExecutionOrder(-1)]
+[DefaultExecutionOrder(-10)]
 public class StatsAndHealthText : MonoBehaviour
 {
     private static StatsAndHealthText instance;
@@ -35,7 +35,6 @@ public class StatsAndHealthText : MonoBehaviour
     {
         healthText.text = hero.Health.ToString();
         statsText.text = hero.Stats.ToString();
-
     }
 
     private void Show()

@@ -7,6 +7,12 @@ public class Enemy : Unit, IVisitor
     [SerializeField] List<itemDrop> dropTable;
     [SerializeField] private Rigidbody rb;
 
+    [Header("Levels")]
+    [SerializeField] private float healthPerLevel;
+    [SerializeField] private float attackPerLevel;
+    [SerializeField] private float defensePerLevel;
+    [SerializeField] private float speedPerLevel;
+
     private Transform player;
 
     public override void Init()
@@ -17,15 +23,21 @@ public class Enemy : Unit, IVisitor
             Debug.LogWarning("Rigidbody On " + this.gameObject + " is null");
             rb = GetComponent<Rigidbody>();
         }
+
         base.Init();
+
+        int currentWave = WaveSpawner.Instance.currentWave;
+
+        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("HealthBuff", StatType.MaxHp, StatModifier.OperatorType.Add, healthPerLevel * currentWave, "HP")));
+        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("AttackBuff", StatType.Attack, StatModifier.OperatorType.Add, attackPerLevel * currentWave, "ATK")));
+        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("DefenseBuff", StatType.Defense, StatModifier.OperatorType.Add, defensePerLevel * currentWave, "DEF")));
+        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("SpeedBuff", StatType.Speed, StatModifier.OperatorType.Add, speedPerLevel * currentWave, "SPD")));
     }
 
     private void FixedUpdate()
     {
         Vector3 direction = (player.position - transform.position).normalized;
         rb.velocity = direction * Stats.Speed;
-
-        //transform.position = Vector3.MoveTowards(transform.position, player.position, Stats.Speed);
     }
 
     public void Visit<T>(T visitable) where T : Component, IVisitable

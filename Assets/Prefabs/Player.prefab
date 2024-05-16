@@ -80,7 +80,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00afe040387454655b93f68e16d71503, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gunEnd: {fileID: 0}
+  gunEnd: {fileID: 8109474950168109298}
   bullet: {fileID: 688853843678793903, guid: 527121880a07642e4a4e5f61aac4cc09, type: 3}
 --- !u!54 &6935090692519252341
 Rigidbody:
@@ -232,3 +232,8 @@ CapsuleCollider:
   m_Height: 1.2
   m_Direction: 1
   m_Center: {x: 0, y: 0.58, z: 0}
+--- !u!4 &8109474950168109298 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4554529779145798828, guid: d936a52147c0d4bd59a18257c0551055, type: 3}
+  m_PrefabInstance: {fileID: 3477249278569704358}
+  m_PrefabAsset: {fileID: 0}

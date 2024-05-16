@@ -162,3 +162,7 @@ MonoBehaviour:
   - prefab: {fileID: 1105989401381518823, guid: cf46d45df7dfb47d690d0f3cc17f328c, type: 3}
     chance: 5
   rb: {fileID: 3446941441036626080}
+  healthPerLevel: 1
+  attackPerLevel: 0.2
+  defensePerLevel: 0
+  speedPerLevel: 0

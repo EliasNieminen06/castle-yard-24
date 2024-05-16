@@ -103,7 +103,7 @@ public abstract class Unit : Entity, IDamageable
     }
 
     protected virtual void OnDeath() {
-        Debug.Log("Unit.OnDeath " + this);
+        //Debug.Log("Unit.OnDeath " + this);
         if (hpBar != null) Destroy(hpBar.gameObject);
     }
 }
