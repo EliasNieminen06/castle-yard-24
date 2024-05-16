@@ -90,12 +90,12 @@ public abstract class Unit : Entity, IDamageable
         bool dodge = Random.Range(0, 100) < Stats.Dodge;
         if (dodge)
         {
-            //Debug.Log("Dodged");
+          //  Debug.Log(this + " Dodged");
             return;
         }
 
         float damageToTake = DamageCalculator.CalculateDamage(damageAmount, Stats.Defense);
-        //Debug.Log($"Took {damageToTake} damage");
+        //Debug.Log($"{this} Took {damageToTake} damage");
 
         Health.ReduceHp(damageToTake);
 

@@ -21,11 +21,13 @@ public class PlayerShootingHandler : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetButtonDown("Fire1") && Time.time > nextFire)
+        if (Input.GetButton("Fire1") && Time.time > nextFire)
         {
-            float fireRateReduction = fireRate * (hero.Stats.CooldownReduction / 100);
-            nextFire = Time.time + fireRate - fireRateReduction;
-            Bullet arrow = Instantiate(arrowPrefab, new Vector3(gunEnd.position.x, gunEnd.position.y, gunEnd.position.z), Quaternion.identity).GetComponent<Bullet>();
+            float fireRateReduction = fireRate * ((float)hero.Stats.CooldownReduction / 100);
+            nextFire = Time.time + (fireRate - fireRateReduction);
+            //Debug.Log("newxtFire: " + (nextFire - Time.time) + "FireRateReduction: " + fireRateReduction);
+            print(hero.Stats.CooldownReduction);
+            Bullet arrow = Instantiate(arrowPrefab, gunEnd.position, gunEnd.rotation).GetComponent<Bullet>();
             arrow.Init(hero.Stats.Attack * baseDamage, arrowSpeed);
         }
     }
