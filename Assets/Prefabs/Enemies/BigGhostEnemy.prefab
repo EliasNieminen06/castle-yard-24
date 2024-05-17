@@ -9,6 +9,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a712e43994bfa419a9f78209713a8db0, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a712e43994bfa419a9f78209713a8db0, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a712e43994bfa419a9f78209713a8db0, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a712e43994bfa419a9f78209713a8db0, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -48,13 +60,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: a712e43994bfa419a9f78209713a8db0, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -8561366969580648218, guid: a712e43994bfa419a9f78209713a8db0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: b0631f3e1d02e4ba689862a34dcbfa5d, type: 2}
     - target: {fileID: 919132149155446097, guid: a712e43994bfa419a9f78209713a8db0, type: 3}
       propertyPath: m_Name
-      value: GhsotEnemy
+      value: BigGhostEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a712e43994bfa419a9f78209713a8db0, type: 3}
       propertyPath: m_Layer
@@ -183,19 +199,17 @@ MonoBehaviour:
   baseStats: {fileID: 11400000, guid: ed7fd5852309945f0860b7fbd4518b10, type: 2}
   hpBarPrefab: {fileID: 1428100850086850590, guid: 5356f6202ffc04353a9cb868d3be800c, type: 3}
   dropTable:
-  - prefab: {fileID: 230164103564006873, guid: 9976157f80e1c41deb4a9a8043722593, type: 3}
+  - prefab: {fileID: 230164103564006873, guid: 71f07664813e14b4ca4e7313a3257898, type: 3}
     chance: 100
-  - prefab: {fileID: 7204183985369099475, guid: 3c078609c55f0441bb505f6ac1ebaed3, type: 3}
-    chance: 1
-  - prefab: {fileID: 7564385756164100209, guid: 910c94f62865447c0bd4377debb014ef, type: 3}
-    chance: 1
-  - prefab: {fileID: 4891438185439883756, guid: dac0fb709e74048f8a6390ab5f1cda5d, type: 3}
-    chance: 1
-  - prefab: {fileID: 1105989401381518823, guid: cf46d45df7dfb47d690d0f3cc17f328c, type: 3}
-    chance: 1
+  - prefab: {fileID: 230164103564006873, guid: 9976157f80e1c41deb4a9a8043722593, type: 3}
+    chance: 50
+  - prefab: {fileID: 230164103564006873, guid: 57a583d8a332c48a098bdf358c6c623b, type: 3}
+    chance: 5
+  - prefab: {fileID: 2510748384267367241, guid: 7c72530ed7fd9442aa3b8c0f94a2013b, type: 3}
+    chance: 100
   rb: {fileID: 5976628038856938009}
   attackFrequency: 1
-  healthPerLevel: 0.25
-  attackPerLevel: 0.2
-  defensePerLevel: 0
-  speedPerLevel: 0.01
+  healthPerLevel: 0.5
+  attackPerLevel: 0.5
+  defensePerLevel: 0.2
+  speedPerLevel: 0.005

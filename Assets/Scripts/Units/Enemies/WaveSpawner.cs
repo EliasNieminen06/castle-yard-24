@@ -60,7 +60,12 @@ public class WaveSpawner : MonoBehaviour
     {
         currentWave++;
         int waveValue = currentWave * 3;
+
+        if (currentWave < 4) waveValue += currentWave;
+
+        ReWriteEnemyDataDictionary();
         GenerateEnemies(waveValue);
+
         spawnInterval = waveDuration / enemiesToSpawn.Count;
         waveTimer = waveDuration;
     }
@@ -124,7 +129,7 @@ public class WaveSpawner : MonoBehaviour
               ValueTuple<int, int> rangeTuple = (0, 0);
               if (enemyDataDictionary.TryGetValue(enemy, out rangeTuple) == false)
               {
-                  throw new IndexOutOfRangeException("Upgrade not in Dictionary");
+                  throw new IndexOutOfRangeException("EnemyData not in Dictionary");
               }
   
               if (rangeTuple.Item1 <= weight && rangeTuple.Item2 > weight)
@@ -134,7 +139,7 @@ public class WaveSpawner : MonoBehaviour
               }
           }
   
-          throw new ArgumentOutOfRangeException("Did not find an upgrade with given weight");
+          throw new ArgumentOutOfRangeException("Did not find an EnemyData with given weight");
       }
   }
 
@@ -145,8 +150,15 @@ public class WaveSpawner : MonoBehaviour
 
         foreach (var enemy in enemySpawnPool)
         {
+            if (enemy.weight + enemy.weightAddedPerWave * currentWave <= 0)
+            {
+                enemySpawnPool.Remove(enemy);
+                ReWriteEnemyDataDictionary();
+                return; ;
+            }
+
             ValueTuple<int, int> tuple = (totalWeight, 0);
-            totalWeight += enemy.weight + enemy.weightAddedPerWave;
+            totalWeight += enemy.weight + enemy.weightAddedPerWave * currentWave;
             tuple.Item2 = totalWeight;
             enemyDataDictionary.Add(enemy, tuple);
         }

@@ -8,9 +8,18 @@ public abstract class Pickup : Entity, IVisitor
 
     private bool visited;
 
+    [SerializeField] Rigidbody rb;
+
     public override void Init()
     {
+        if (rb == null)
+        {
+            rb = GetComponent<Rigidbody>();
+            Debug.LogWarning($"Rigidbody on {this} is null");
+        }
+
         visited = false;
+        ShootInRandomDirection();
         base.Init();
     }
 
@@ -28,6 +37,14 @@ public abstract class Pickup : Entity, IVisitor
 
     public void OnTriggerEnter(Collider other)
     {
+        if (other.gameObject.layer == LayerMask.NameToLayer("Ground")) rb.drag = 10f;
+
         other.GetComponentInParent<IVisitable>()?.Accept(this);
     }
+
+    private void ShootInRandomDirection()
+    {
+        rb.AddForce(Random.insideUnitSphere.normalized * 5f, ForceMode.Impulse);
+    }
+
 }

@@ -10,15 +10,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: a712e43994bfa419a9f78209713a8db0, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.2
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a712e43994bfa419a9f78209713a8db0, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.2
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a712e43994bfa419a9f78209713a8db0, type: 3}
       propertyPath: m_LocalScale.z
-      value: 1.2
+      value: 0.9
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a712e43994bfa419a9f78209713a8db0, type: 3}
       propertyPath: m_LocalPosition.x
@@ -70,7 +70,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: b0631f3e1d02e4ba689862a34dcbfa5d, type: 2}
     - target: {fileID: 919132149155446097, guid: a712e43994bfa419a9f78209713a8db0, type: 3}
       propertyPath: m_Name
-      value: GhsotEnemy
+      value: GhostSwarmer
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: a712e43994bfa419a9f78209713a8db0, type: 3}
       propertyPath: m_Layer
@@ -199,11 +199,11 @@ MonoBehaviour:
   baseStats: {fileID: 11400000, guid: ed7fd5852309945f0860b7fbd4518b10, type: 2}
   hpBarPrefab: {fileID: 1428100850086850590, guid: 5356f6202ffc04353a9cb868d3be800c, type: 3}
   dropTable:
-  - prefab: {fileID: 230164103564006873, guid: 71f07664813e14b4ca4e7313a3257898, type: 3}
-    chance: 100
+  - prefab: {fileID: 230164103564006873, guid: 395cb58c5046f490e9b0dc660edca6a2, type: 3}
+    chance: 50
   rb: {fileID: 5976628038856938009}
   attackFrequency: 1
-  healthPerLevel: 0.25
-  attackPerLevel: 0.2
+  healthPerLevel: 0.1
+  attackPerLevel: 0.1
   defensePerLevel: 0
-  speedPerLevel: 0.01
+  speedPerLevel: 0.02

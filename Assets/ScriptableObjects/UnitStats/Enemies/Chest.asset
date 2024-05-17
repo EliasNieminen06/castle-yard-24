@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8073e8356b5de41bfa362c2d9f582469, type: 3}
-  m_Name: GhostEnemy
+  m_Name: Chest
   m_EditorClassIdentifier: 
-  maxHp: 5
-  attack: 10
+  maxHp: 20
+  attack: 0
   defense: 0
-  speed: 4
+  speed: 0
   magnet: 0
   cooldownReduction: 0
   areaOfEffect: 0

@@ -47,7 +47,26 @@ MonoBehaviour:
   enemySpawnDatas:
   - enemyPrefab: {fileID: 5135798842236854320, guid: 74f15b10e74834f88aa97684aff26d6d, type: 3}
     cost: 1
-    weight: 0
+    weight: 100
+    weightAddedPerWave: -1
     firstWave: 1
+    lastWave: 100
+  - enemyPrefab: {fileID: 5135798842236854320, guid: b50fc406a60414400b44bf1c3dbc2139, type: 3}
+    cost: 3
+    weight: 10
+    weightAddedPerWave: 0
+    firstWave: 3
+    lastWave: -1
+  - enemyPrefab: {fileID: 1080686049563578199, guid: 045b76e14b89b424ebee2c83522f22e7, type: 3}
+    cost: 5
+    weight: 5
+    weightAddedPerWave: 1
+    firstWave: 5
+    lastWave: -1
+  - enemyPrefab: {fileID: 1080686049563578199, guid: 25f28db62e2d94b7695c31dd26f7afc6, type: 3}
+    cost: 9
+    weight: 5
+    weightAddedPerWave: 1
+    firstWave: 10
     lastWave: -1
   waveDuration: 15

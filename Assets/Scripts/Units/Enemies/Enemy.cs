@@ -43,11 +43,6 @@ public class Enemy : Unit, IVisitor
 
     public override void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
-        {
-            TakeDamage(10f);
-        }
-
         base.Update();
     }
 
@@ -76,7 +71,7 @@ public class Enemy : Unit, IVisitor
             int rng = Random.Range(0, 100);
             if (rng < item.chance)
             {
-                Instantiate(item.prefab, transform.position, Quaternion.identity);
+                Instantiate(item.prefab, transform.position + Vector3.up, Quaternion.identity);
             }
         }
 
