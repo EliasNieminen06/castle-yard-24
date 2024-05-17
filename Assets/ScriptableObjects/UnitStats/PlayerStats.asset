@@ -21,3 +21,5 @@ MonoBehaviour:
   areaOfEffect: 100
   dodge: 0
   expBonus: 0
+  projectiles: 1
+  pierce: 1

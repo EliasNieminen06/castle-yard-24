@@ -5,7 +5,8 @@ using UnityEngine;
 public class Enemy : Unit, IVisitor
 {
     [SerializeField] List<itemDrop> dropTable;
-    [SerializeField] private Rigidbody rb;
+    [SerializeField] protected Rigidbody rb;
+    [SerializeField] private float attackFrequency;
 
     [Header("Levels")]
     [SerializeField] private float healthPerLevel;
@@ -13,7 +14,11 @@ public class Enemy : Unit, IVisitor
     [SerializeField] private float defensePerLevel;
     [SerializeField] private float speedPerLevel;
 
-    private Transform player;
+    protected Transform player;
+
+    private float nextAttack;
+
+    private IVisitable visitable;
 
     public override void Init()
     {
@@ -26,38 +31,14 @@ public class Enemy : Unit, IVisitor
 
         base.Init();
 
-        int currentWave = WaveSpawner.Instance.currentWave;
+        int level = WaveSpawner.Instance.currentWave - 1;
 
-        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("HealthBuff", StatType.MaxHp, StatModifier.OperatorType.Add, healthPerLevel * currentWave, "HP")));
-        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("AttackBuff", StatType.Attack, StatModifier.OperatorType.Add, attackPerLevel * currentWave, "ATK")));
-        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("DefenseBuff", StatType.Defense, StatModifier.OperatorType.Add, defensePerLevel * currentWave, "DEF")));
-        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("SpeedBuff", StatType.Speed, StatModifier.OperatorType.Add, speedPerLevel * currentWave, "SPD")));
-    }
+        if (level == 0) return;
 
-    private void FixedUpdate()
-    {
-        Vector3 direction = (player.position - transform.position).normalized;
-        rb.velocity = direction * Stats.Speed;
-    }
-
-    public void Visit<T>(T visitable) where T : Component, IVisitable
-    {
-        if (visitable is Hero hero)
-        {
-            hero.TakeDamage(Stats.Attack);
-            base.OnDeath();
-            Destroy(gameObject);
-        }
-    }
-
-    public void OnTriggerEnter(Collider other)
-    {
-        other.GetComponentInParent<IVisitable>()?.Accept(this);
-    }
-
-    private void OnCollisionEnter(Collision collision)
-    {
-        collision.transform.GetComponentInParent<IVisitable>()?.Accept(this);
+        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("HealthBuff", StatType.MaxHp, StatModifier.OperatorType.Add, healthPerLevel * level, "HP")));
+        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("AttackBuff", StatType.Attack, StatModifier.OperatorType.Add, attackPerLevel * level, "ATK")));
+        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("DefenseBuff", StatType.Defense, StatModifier.OperatorType.Add, defensePerLevel * level, "DEF")));
+        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("SpeedBuff", StatType.Speed, StatModifier.OperatorType.Add, speedPerLevel * level, "SPD")));
     }
 
     public override void Update()
@@ -68,6 +49,23 @@ public class Enemy : Unit, IVisitor
         }
 
         base.Update();
+    }
+
+    public void Visit<T>(T visitable) where T : Component, IVisitable
+    {
+        if (visitable is Hero hero)
+        {
+            hero.TakeDamage(Stats.Attack);
+            nextAttack = Time.time + attackFrequency;
+        }
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (Time.time < nextAttack) return;
+        if (visitable == null) visitable = other.GetComponentInParent<IVisitable>();
+
+        visitable?.Accept(this);
     }
 
     protected override void OnDeath()

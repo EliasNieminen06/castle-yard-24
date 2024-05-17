@@ -12,6 +12,8 @@ public enum StatType
     [Tooltip("Precentage")] AreaOfEffect,
     [Tooltip("Precentage 1 = 100%")] Dodge,
     [Tooltip("Precentage")] ExpBonus,
+    Projectiles,
+    Pierce,
 
 }
 
@@ -133,6 +135,30 @@ public class Stats
             var q = new Query(StatType.ExpBonus, baseStats.expBonus);
             mediator.PerformQuery(this, q);
             int roundedValue = Mathf.FloorToInt(q.Value);
+            return roundedValue;
+        }
+    }
+
+    public int Projectiles
+    {
+        get
+        {
+            // Return value with modifiers applied
+            var q = new Query(StatType.Projectiles, baseStats.projectiles);
+            mediator.PerformQuery(this, q);
+            int roundedValue = Mathf.RoundToInt(q.Value);
+            return roundedValue;
+        }
+    }
+
+    public int Pierce
+    {
+        get
+        {
+            // Return value with modifiers applied
+            var q = new Query(StatType.Pierce, baseStats.pierce);
+            mediator.PerformQuery(this, q);
+            int roundedValue = Mathf.RoundToInt(q.Value);
             return roundedValue;
         }
     }

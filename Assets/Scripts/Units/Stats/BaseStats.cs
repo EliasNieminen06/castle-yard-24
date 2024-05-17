@@ -13,4 +13,6 @@ public class BaseStats : ScriptableObject
     public int areaOfEffect;
     public int dodge;
     public int expBonus;
+    public int projectiles;
+    public int pierce;
 }

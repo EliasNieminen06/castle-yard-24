@@ -95,9 +95,9 @@ public abstract class Unit : Entity, IDamageable
         }
 
         float damageToTake = DamageCalculator.CalculateDamage(damageAmount, Stats.Defense);
-        //Debug.Log($"{this} Took {damageToTake} damage");
-
         Health.ReduceHp(damageToTake);
+
+        //Debug.Log($"{this} Took {damageToTake} damage, Hp Left: {Health.currentHp}");
 
         if (Health.currentHp <= 0) OnDeath();
     }

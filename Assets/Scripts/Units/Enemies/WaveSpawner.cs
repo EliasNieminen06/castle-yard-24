@@ -56,7 +56,7 @@ public class WaveSpawner : MonoBehaviour
     private void GenerateWave()
     {
         currentWave++;
-        int waveValue = currentWave * 10;
+        int waveValue = currentWave * 3;
         GenerateEnemies(waveValue);
         spawnInterval = waveDuration / enemiesToSpawn.Count;
         waveTimer = waveDuration;
@@ -165,6 +165,7 @@ public class WaveSpawner : MonoBehaviour
         Vector3 direction = new Vector3(UnityEngine.Random.rotation.x, 0, UnityEngine.Random.rotation.z).normalized;
         Vector3 playerPosition = GameManager.Instance.Player.position;
         Vector3 spawnPosition = playerPosition + direction * distance;
+        spawnPosition.y = 0;
         return spawnPosition;
     }
 

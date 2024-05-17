@@ -8,6 +8,8 @@ public class Bullet : MonoBehaviour
     [SerializeField] float lifeTime;
     [SerializeField] private Rigidbody rb;
 
+    private int pierce;
+
     void Update()
     {
         rb.AddForce(transform.forward, ForceMode.Impulse);
@@ -15,7 +17,7 @@ public class Bullet : MonoBehaviour
         if (lifeTime <= 0) Destroy(this.gameObject);
     }
 
-    public void Init(float damage, float projectileSpeed)
+    public void Init(float damage, float projectileSpeed, float AreaOfEffect, int pierce)
     {
         if (rb == null)
         {
@@ -25,13 +27,31 @@ public class Bullet : MonoBehaviour
 
         rb.AddForce(transform.forward * projectileSpeed, ForceMode.Impulse);
 
+        transform.localScale *= AreaOfEffect / 100;
+
         this.damage = damage;
+        this.pierce = pierce;
     }
 
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerEnter(Collider other)
     {
-        collision.gameObject.GetComponent<IDamageable>()?.TakeDamage(damage);
-        Debug.Log("Dealt " + damage + " damage");
+        IDamageable damageable = other.gameObject.GetComponentInParent<IDamageable>();
+        if (damageable == null)
+        {
+            Debug.LogWarning($"{this} collided with a non damageable");
+            return;
+        }
+
+        damageable.TakeDamage(damage);
+        pierce--;
+
+        if (pierce <= 0) DestroySelf();
+
+        //Debug.Log("Dealt " + damage + " damage");
+    }
+
+    private void DestroySelf()
+    {
         Destroy(gameObject);
     }
 }

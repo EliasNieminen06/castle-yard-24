@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemySpawnDatas:
-  - enemyPrefab: {fileID: 8805680533001787292, guid: ce28910114d7b4357aa14e560ef532a7, type: 3}
+  - enemyPrefab: {fileID: 5135798842236854320, guid: 74f15b10e74834f88aa97684aff26d6d, type: 3}
     cost: 1
     weight: 0
     firstWave: 1
     lastWave: -1
-  waveDuration: 10
+  waveDuration: 15

@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50beabbfc3f1f49c39e2d4e3b54fde11, type: 3}
-  m_Name: Mega Magnet
+  m_Name: Whetstone
   m_EditorClassIdentifier: 
-  itemName: Mega Magnet
-  type: 4
+  itemName: Whetstone
+  type: 10
   operatorType: 0
-  value: 0.8
+  value: 1
   stackValue: 0
-  maxStacks: 5
-  weight: 75
-  color: {r: 0.3537736, g: 0.488745, b: 1, a: 1}
-  valueString: 0.8 MGNT
+  maxStacks: 2
+  weight: 10
+  color: {r: 0.26321647, g: 0.7640978, b: 0.8584906, a: 1}
+  valueString: 1 Pierce
