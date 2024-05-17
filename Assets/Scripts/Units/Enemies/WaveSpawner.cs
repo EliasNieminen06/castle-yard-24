@@ -17,6 +17,9 @@ public class WaveSpawner : MonoBehaviour
     private List<EnemySpawnData> enemySpawnPool = new List<EnemySpawnData>();
     private List<GameObject> enemiesToSpawn = new List<GameObject>();
 
+    private Dictionary<EnemySpawnData, ValueTuple<int, int>> enemyDataDictionary = new Dictionary<EnemySpawnData, ValueTuple<int, int>>();
+    private int spawnPoolTotalWeight;
+
     public int currentWave { get; private set; }
 
     [SerializeField] private float waveDuration;
@@ -69,11 +72,13 @@ public class WaveSpawner : MonoBehaviour
             if (currentWave == enemy.firstWave)
             {
                 enemySpawnPool.Add(enemy);
+                ReWriteEnemyDataDictionary();
             }
 
             if (currentWave == enemy.lastWave + 1 && enemySpawnPool.Contains(enemy))
             {
                 enemySpawnPool.Remove(enemy);
+                ReWriteEnemyDataDictionary();
             }
         }
 
@@ -82,12 +87,12 @@ public class WaveSpawner : MonoBehaviour
 
         while (costLeft > 0)
         {
-            int randomEnemyIndex = UnityEngine.Random.Range(0, enemySpawnPool.Count);
-            int randomEnemyCost = enemySpawnPool[randomEnemyIndex].cost;
+            EnemySpawnData randomEnemy = GetRandomEnemyData();
+            int randomEnemyCost = randomEnemy.cost;
 
             if (randomEnemyCost <= costLeft)
             {
-                randomEnemies.Add(enemySpawnPool[randomEnemyIndex].enemyPrefab);
+                randomEnemies.Add(randomEnemy.enemyPrefab);
                 costLeft -= randomEnemyCost;
             }
             else
@@ -105,54 +110,49 @@ public class WaveSpawner : MonoBehaviour
         }
     }
 
-  //private UpgradeItem GetRandomEnemy(List<GameObject> listToAddTo)
-  //{
-  //    Dictionary<EnemySpawnData, ValueTuple<int, int>> itemDictionary = new Dictionary<EnemySpawnData, ValueTuple<int, int>>();
-  //    int totalWeight = 0;
-  //
-  //    foreach (var upgradeItem in itemDrawPool)
-  //    {
-  //        ValueTuple<int, int> tuple = (totalWeight, 0);
-  //        totalWeight += upgradeItem.weight;
-  //        tuple.Item2 = totalWeight - 1;
-  //        itemDictionary.Add(upgradeItem, tuple);
-  //    }
-  //
-  //    int randomWeight = UnityEngine.Random.Range(1, totalWeight);
-  //    //Debug.Log("Trying to get upgrade with a weight of: " + randomWeight);
-  //    UpgradeItem item = GetUpgradeWithWeight(randomWeight);
-  //
-  //    while (listToAddTo.Contains(item))
-  //    {
-  //        randomWeight = UnityEngine.Random.Range(0, totalWeight);
-  //        //Debug.Log("Trying to get upgrade with a weight of: " + randomWeight);
-  //        item = GetUpgradeWithWeight(randomWeight);
-  //        if (listToAddTo.Count == itemDrawPool.Count) break;
-  //    }
-  //
-  //    //Debug.Log("Got Upgrade: " + item);
-  //    return item;
-  //
-  //    UpgradeItem GetUpgradeWithWeight(int weight)
-  //    {
-  //        foreach (var upgradeItem in itemDrawPool)
-  //        {
-  //            ValueTuple<int, int> rangeTuple = (0, 0);
-  //            if (itemDictionary.TryGetValue(upgradeItem, out rangeTuple) == false)
-  //            {
-  //                throw new IndexOutOfRangeException("Upgrade not in Dictionary");
-  //            }
-  //
-  //            if (rangeTuple.Item1 <= weight && rangeTuple.Item2 >= weight)
-  //            {
-  //                //Debug.Log(rangeTuple + " " + weight);
-  //                return upgradeItem;
-  //            }
-  //        }
-  //
-  //        throw new ArgumentOutOfRangeException("Did not find an upgrade with given weight");
-  //    }
-  //}
+  private EnemySpawnData GetRandomEnemyData()
+  {
+      int randomWeight = UnityEngine.Random.Range(0, spawnPoolTotalWeight);
+      EnemySpawnData enemyData = GetEnemyWithWeight(randomWeight);
+
+      return enemyData;
+  
+      EnemySpawnData GetEnemyWithWeight(int weight)
+      {
+          foreach (var enemy in enemySpawnPool)
+          {
+              ValueTuple<int, int> rangeTuple = (0, 0);
+              if (enemyDataDictionary.TryGetValue(enemy, out rangeTuple) == false)
+              {
+                  throw new IndexOutOfRangeException("Upgrade not in Dictionary");
+              }
+  
+              if (rangeTuple.Item1 <= weight && rangeTuple.Item2 > weight)
+              {
+                  //Debug.Log(rangeTuple + " " + weight);
+                  return enemy;
+              }
+          }
+  
+          throw new ArgumentOutOfRangeException("Did not find an upgrade with given weight");
+      }
+  }
+
+    private void ReWriteEnemyDataDictionary()
+    {
+        int totalWeight = 0;
+        enemyDataDictionary.Clear();
+
+        foreach (var enemy in enemySpawnPool)
+        {
+            ValueTuple<int, int> tuple = (totalWeight, 0);
+            totalWeight += enemy.weight + enemy.weightAddedPerWave;
+            tuple.Item2 = totalWeight;
+            enemyDataDictionary.Add(enemy, tuple);
+        }
+
+        spawnPoolTotalWeight = totalWeight;
+    }
 
     private void SpawnEnemy(GameObject enemyPrefab)
     {
@@ -176,6 +176,7 @@ public class WaveSpawner : MonoBehaviour
         public GameObject enemyPrefab;
         public int cost;
         public int weight;
+        public int weightAddedPerWave;
 
         public int firstWave;
         public int lastWave;

@@ -169,5 +169,5 @@ public class Stats
         this.baseStats = baseStats;
     }
 
-    public override string ToString() => $"Attack: {Attack}, Defense: {Defense}, Speed: {Math.Round(Speed, 1)}, Magnet: {Math.Round(Magnet, 1)}, CDR: {CooldownReduction}%, AOE: {AreaOfEffect}%, Dodge: {Dodge}%, Exp+: {ExpBonus}%";
+    public override string ToString() => $"Attack: {Attack} \nDefense: {Defense} \nSpeed: {Math.Round(Speed, 1)} \nMagnet: {Math.Round(Magnet, 1)} \nCDR: {CooldownReduction}% \nAOE: {AreaOfEffect}% \nDodge: {Dodge}% \nExp+: {ExpBonus}% \nProjectiles: {Projectiles} \nPierce: {Pierce}";
 }
