@@ -20,6 +20,8 @@ public class Enemy : Unit, IVisitor
 
     private IVisitable visitable;
 
+    [SerializeField] private bool isChest;
+
     public override void Init()
     {
         player = GameManager.Instance.Player;
@@ -29,16 +31,18 @@ public class Enemy : Unit, IVisitor
             rb = GetComponent<Rigidbody>();
         }
 
+        if (isChest) rb.AddForce(Random.insideUnitSphere.normalized * 5f, ForceMode.Impulse);
+
         base.Init();
 
         int level = WaveSpawner.Instance.currentWave - 1;
 
         if (level == 0) return;
 
-        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("HealthBuff", StatType.MaxHp, StatModifier.OperatorType.Add, healthPerLevel * level, "HP")));
-        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("AttackBuff", StatType.Attack, StatModifier.OperatorType.Add, attackPerLevel * level, "ATK")));
-        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("DefenseBuff", StatType.Defense, StatModifier.OperatorType.Add, defensePerLevel * level, "DEF")));
-        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("SpeedBuff", StatType.Speed, StatModifier.OperatorType.Add, speedPerLevel * level, "SPD")));
+        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("HealthBuff", StatType.MaxHp, StatModifier.OperatorType.Add, healthPerLevel * level)));
+        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("AttackBuff", StatType.Attack, StatModifier.OperatorType.Add, attackPerLevel * level)));
+        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("DefenseBuff", StatType.Defense, StatModifier.OperatorType.Add, defensePerLevel * level)));
+        Stats.Mediator.AddModifier(new BasicStatModifier(new StatModifierConfig("SpeedBuff", StatType.Speed, StatModifier.OperatorType.Add, speedPerLevel * level)));
     }
 
     public override void Update()
@@ -71,7 +75,7 @@ public class Enemy : Unit, IVisitor
             int rng = Random.Range(0, 100);
             if (rng < item.chance)
             {
-                Instantiate(item.prefab, transform.position + Vector3.up, Quaternion.identity);
+                Instantiate(item.prefab, transform.position + Vector3.up * transform.localScale.y, Quaternion.identity);
             }
         }
 

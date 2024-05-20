@@ -97,6 +97,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a712e43994bfa419a9f78209713a8db0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 5787014282267481917}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a712e43994bfa419a9f78209713a8db0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 37973559555559310}
     - targetCorrespondingSourceObject: {fileID: 7144441432044548013, guid: a712e43994bfa419a9f78209713a8db0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 163235203385305698}
@@ -197,7 +200,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseStats: {fileID: 11400000, guid: ed7fd5852309945f0860b7fbd4518b10, type: 2}
-  hpBarPrefab: {fileID: 1428100850086850590, guid: 5356f6202ffc04353a9cb868d3be800c, type: 3}
+  hpBarPrefab: {fileID: 0}
   dropTable:
   - prefab: {fileID: 230164103564006873, guid: 71f07664813e14b4ca4e7313a3257898, type: 3}
     chance: 100
@@ -206,10 +209,34 @@ MonoBehaviour:
   - prefab: {fileID: 230164103564006873, guid: 57a583d8a332c48a098bdf358c6c623b, type: 3}
     chance: 5
   - prefab: {fileID: 2510748384267367241, guid: 7c72530ed7fd9442aa3b8c0f94a2013b, type: 3}
-    chance: 100
+    chance: 33
   rb: {fileID: 5976628038856938009}
   attackFrequency: 1
   healthPerLevel: 0.5
   attackPerLevel: 0.5
   defensePerLevel: 0.2
   speedPerLevel: 0.005
+  isChest: 0
+  agent: {fileID: 37973559555559310}
+--- !u!195 &37973559555559310
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5135798842236854320}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.1
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 180
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 1
+  m_ObstacleAvoidanceType: 4

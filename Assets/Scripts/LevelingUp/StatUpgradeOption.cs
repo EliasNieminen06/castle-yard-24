@@ -4,33 +4,45 @@ using TMPro;
 
 public class StatUpgradeOption : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI upgradeNameText;
+    [SerializeField] private TextMeshProUGUI upgradeNameTMP;
+    [SerializeField] private TextMeshProUGUI upgradeLevelTMP;
+    [SerializeField] private TextMeshProUGUI upgradeDescriptionTMP;
     [SerializeField] private Button upgradeButton;
-    [SerializeField] private Image background;
+    [SerializeField] private Image icon;
 
-    public void SetUpgrade(Hero hero, StatModifierConfig modifierConfig, Color backgroundColor, bool showStatInsteadOfName, System.Action<int> OnApply)
+    private float ableToApplyTime;
+
+    public void SetUpgrade(Hero hero, StatModifierConfig modifierConfig, Color backgroundColor, bool showStatInsteadOfName, float ableToApplyTime, System.Action<int> OnApply)
     {
         gameObject.SetActive(true);
 
-        background.color = backgroundColor;
+        this.ableToApplyTime = ableToApplyTime;
+        //icon.color = backgroundColor;
 
-        if (showStatInsteadOfName) upgradeNameText.text = $"{modifierConfig.type} + {modifierConfig.valueString}";
-        else upgradeNameText.text = $"{modifierConfig.name} + {modifierConfig.valueString}";
+        if (showStatInsteadOfName) upgradeNameTMP.text = modifierConfig.type.ToString();
+        else upgradeNameTMP.text = modifierConfig.name;
+
+        upgradeLevelTMP.text = $"Lv: {hero.Stats.Mediator.GetModifierStacks(modifierConfig.name) + 1} / {modifierConfig.maxStacks}";
+        upgradeDescriptionTMP.text = modifierConfig.description;
+
+        icon.sprite = modifierConfig.icon;
 
         upgradeButton.onClick.RemoveAllListeners();
         upgradeButton.onClick.AddListener(() =>
         {
             ApplyUpgrade(hero, modifierConfig, OnApply);
-            LevelUpScreen.Hide_Static();
         });
     }
 
     public void ApplyUpgrade(Hero hero, StatModifierConfig modifierConfig, System.Action<int> OnApply)
     {
+        if (Time.realtimeSinceStartup < ableToApplyTime) return;
+
         StatsMediator mediator = hero.Stats.Mediator;
         if (mediator.TryModifyModifier(modifierConfig.name))
         {
             OnApply.Invoke(mediator.GetModifierStacks(modifierConfig.name));
+            LevelUpScreen.Hide_Static();
             return;
         }
 
@@ -40,5 +52,7 @@ public class StatUpgradeOption : MonoBehaviour
 
         mediator.AddModifier(modifier);
         OnApply.Invoke(mediator.GetModifierStacks(modifierConfig.name));
+
+        LevelUpScreen.Hide_Static();
     }
 }

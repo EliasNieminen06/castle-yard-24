@@ -20,4 +20,5 @@ MonoBehaviour:
   maxStacks: 5
   weight: 100
   color: {r: 0.5849056, g: 0.12967247, b: 0.12967247, a: 1}
-  valueString: 10 ATK
+  description: Increase Attack by 10
+  icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}

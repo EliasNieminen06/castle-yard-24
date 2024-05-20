@@ -29,6 +29,8 @@ public class LevelUpScreen : MonoBehaviour
     private List<StatUpgrade> currentUpgrades;
     private List<UpgradeItem> currentItems;
 
+    private const float TIME_BEFORE_CAN_CHOOSE_UPGRADE = 0.3f;
+
     private void Awake()
     {
         instance = this;
@@ -44,6 +46,8 @@ public class LevelUpScreen : MonoBehaviour
     {
         gameObject.SetActive(true);
 
+        float ableToApplyUpgradeTime = Time.realtimeSinceStartup + TIME_BEFORE_CAN_CHOOSE_UPGRADE;
+
         if (endlessUpgrades.Count == 0)
         {
             Hide();
@@ -52,8 +56,8 @@ public class LevelUpScreen : MonoBehaviour
 
         //upgradeOptions.ForEach((upgradeOption) => upgradeOption.gameObject.SetActive(true));
 
-        if (!itemHandler.ItemsMaxed(hero)) SetItems(hero);
-        else SetUpgrades(hero);
+        if (!itemHandler.ItemsMaxed(hero)) SetItems(hero, ableToApplyUpgradeTime);
+        else SetUpgrades(hero, ableToApplyUpgradeTime);
 
         this.OnHide = OnHide;
 
@@ -67,7 +71,7 @@ public class LevelUpScreen : MonoBehaviour
         OnHide.Invoke();
     }
 
-    private void SetUpgrades(Hero hero)
+    private void SetUpgrades(Hero hero, float ableToApplyUpgradeTime)
     {
         currentUpgrades.Clear();
         endlessUpgradeHandler.AddUpgradesToList(currentUpgrades, upgradeOptions.Count);
@@ -77,13 +81,13 @@ public class LevelUpScreen : MonoBehaviour
             if (i == currentUpgrades.Count) break;
 
             var rarity = endlessUpgradeHandler.RollRarity(currentUpgrades[i]);
-            upgradeOptions[i].SetUpgrade(hero, rarity.config, rarity.color, true, (int stacks) => {
+            upgradeOptions[i].SetUpgrade(hero, rarity.config, rarity.color, true, ableToApplyUpgradeTime, (int stacks) => {
                 Debug.Log(rarity.config.name + " " + stacks);
             });
         }
     }
 
-    private void SetItems(Hero hero)
+    private void SetItems(Hero hero, float ableToApplyUpgradeTime)
     {
         currentItems.Clear();
         itemHandler.AddItemsToList(currentItems, upgradeOptions.Count);
@@ -98,7 +102,7 @@ public class LevelUpScreen : MonoBehaviour
 
             UpgradeItem item = currentItems[i];
 
-            upgradeOptions[i].SetUpgrade(hero, item.modifierConfig, item.color, false, (int stacks) => {
+            upgradeOptions[i].SetUpgrade(hero, item.modifierConfig, item.color, false, ableToApplyUpgradeTime, (int stacks) => {
                 if (stacks >= item.modifierConfig.maxStacks)
                 {
                     itemHandler.RemoveItemFromDrawPool(item);

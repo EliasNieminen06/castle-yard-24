@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System;
+using UnityEngine.AI;
 
 public class WaveSpawner : MonoBehaviour
 {
@@ -168,7 +169,7 @@ public class WaveSpawner : MonoBehaviour
 
     private void SpawnEnemy(GameObject enemyPrefab)
     {
-        GameObject newEnemy = Instantiate(enemyPrefab, GetRandomSpawnPosition(), Quaternion.identity); ;
+        GameObject newEnemy = Instantiate(enemyPrefab, GetRandomSpawnPosition(), Quaternion.identity);
     }
 
     private Vector3 GetRandomSpawnPosition()
@@ -178,7 +179,11 @@ public class WaveSpawner : MonoBehaviour
         Vector3 playerPosition = GameManager.Instance.Player.position;
         Vector3 spawnPosition = playerPosition + direction * distance;
         spawnPosition.y = 0;
-        return spawnPosition;
+
+        NavMeshHit hit;
+        NavMesh.SamplePosition(spawnPosition, out hit, 100, -1); 
+
+        return hit.position;
     }
 
 

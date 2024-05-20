@@ -13,7 +13,7 @@ public class InventorySlot : MonoBehaviour
     public void SetItem(UpgradeItem item)
     {
         this.item = item;
-        icon.color = item.color;
+        icon.sprite = item.icon;
     }
 
     public void UpdateSlot(Hero hero)

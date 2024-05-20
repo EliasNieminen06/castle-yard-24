@@ -64,7 +64,8 @@ public class StackableStatModifier : StatModifier
 
 public abstract class StatModifier : IDisposable
 {
-    public enum OperatorType {
+    public enum OperatorType
+    {
         Add,
         Multiply
     }
@@ -172,7 +173,8 @@ public struct StatModifierConfig
     public readonly bool refreshable;
     public readonly bool timeStackable;
 
-    public readonly string valueString;
+    public readonly string description;
+    public readonly Sprite icon;
 
     /// <summary>
     /// Used for Pickups
@@ -189,17 +191,18 @@ public struct StatModifierConfig
         this.maxStacks = maxStacks;
         this.refreshable = refreshable;
         this.timeStackable = timeStackable;
- 
+        this.icon = null;
+
         if (valueString == "") valueString = value.ToString();
 
-        this.valueString = valueString;
+        this.description = valueString;
 
     }
 
     /// <summary>
     /// Used for Items
     /// </summary>
-    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value, float stackValue, int maxStacks, string valueString)
+    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value, float stackValue, int maxStacks, string description, Sprite icon)
     {
         this.name = name;
         this.type = type;
@@ -211,16 +214,17 @@ public struct StatModifierConfig
         this.maxStacks = maxStacks;
         this.refreshable = false;
         this.timeStackable = false;
+        this.icon = icon;
 
-        if (valueString == "") valueString = value.ToString();
+        if (description == "") description = value.ToString();
 
-        this.valueString = valueString;
+        this.description = description;
     }
 
     /// <summary>
     /// Used for endless stat upgrades
     /// </summary>
-    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value, string valueString)
+    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value, string valueString, Sprite icon)
     {
         this.name = name;
         this.type = type;
@@ -232,9 +236,29 @@ public struct StatModifierConfig
         this.maxStacks = 0;
         this.refreshable = false;
         this.timeStackable = false;
+        this.icon = icon;
 
         if (valueString == "") valueString = value.ToString();
 
-        this.valueString = valueString;
+        this.description = valueString;
+    }
+
+    /// <summary>
+    /// Used for Enemies
+    /// </summary>
+    public StatModifierConfig(string name, StatType type, StatModifier.OperatorType operatorType, float value)
+    {
+        this.name = name;
+        this.type = type;
+        this.operatorType = operatorType;
+        this.value = value;
+        this.duration = 0;
+        this.stackable = true;
+        this.stackValue = 0;
+        this.maxStacks = 0;
+        this.refreshable = false;
+        this.timeStackable = false;
+        this.icon = null;
+        this.description = "";
     }
 }

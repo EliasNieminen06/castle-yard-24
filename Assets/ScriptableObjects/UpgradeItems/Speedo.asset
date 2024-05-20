@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50beabbfc3f1f49c39e2d4e3b54fde11, type: 3}
   m_Name: Speedo
   m_EditorClassIdentifier: 
-  itemName: Speedo
+  itemName: Wings
   type: 3
   operatorType: 1
   value: 1.2
@@ -20,4 +20,5 @@ MonoBehaviour:
   maxStacks: 3
   weight: 50
   color: {r: 1, g: 0.495283, b: 0.8530179, a: 1}
-  valueString: 20% SPD
+  description: Increase Speed By 20%
+  icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}

@@ -216,6 +216,7 @@ MonoBehaviour:
   attackPerLevel: 0
   defensePerLevel: 0
   speedPerLevel: 0
+  isChest: 1
 --- !u!4 &2998316492272183795 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 0f416099837d24033bc043d44c9f8fbd, type: 3}

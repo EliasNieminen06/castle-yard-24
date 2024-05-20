@@ -9,6 +9,8 @@ public class StatUpgrade : ScriptableObject
     public StatModifier.OperatorType operatorType;
     public int weight;
 
+    public Sprite icon;
+
     [Header("Values")]
     public float commonValue;
     public float rareValue;
@@ -40,9 +42,9 @@ public class StatUpgrade : ScriptableObject
 
     private void OnEnable()
     {
-        common = new StatModifierConfig(upgradeName + "Common", type, operatorType, commonValue, commonValueString);
-        rare = new StatModifierConfig(upgradeName + "Rare", type, operatorType, rareValue, rareValueString);
-        epic = new StatModifierConfig(upgradeName + "Epic", type, operatorType, epicValue, epicValueString);
-        legendary = new StatModifierConfig(upgradeName + "Legendary", type, operatorType, legendaryValue, legendaryValueString);
+        common = new StatModifierConfig(upgradeName + "Common", type, operatorType, commonValue, commonValueString, icon);
+        rare = new StatModifierConfig(upgradeName + "Rare", type, operatorType, rareValue, rareValueString, icon);
+        epic = new StatModifierConfig(upgradeName + "Epic", type, operatorType, epicValue, epicValueString, icon);
+        legendary = new StatModifierConfig(upgradeName + "Legendary", type, operatorType, legendaryValue, legendaryValueString, icon);
     }
 }
