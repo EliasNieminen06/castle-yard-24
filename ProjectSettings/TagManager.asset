@@ -3,7 +3,8 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Obstacle
   layers:
   - Default
   - TransparentFX
@@ -14,12 +15,12 @@ TagManager:
   - Player
   - Pickup
   - Ground
-  - OnlyCollideWithGround
+  - OnlyCollideWithGroundAndObstacles
   - OnlyCollideWithPlayer
   - Enemy
-  - OnlyCollideWithEnemy
-  - 
-  - 
+  - OnlyCollideWithEnemyAndObstacle
+  - Obstacle
+  - EnemyBullet
   - 
   - 
   - 
