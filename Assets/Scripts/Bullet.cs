@@ -12,7 +12,6 @@ public class Bullet : MonoBehaviour
 
     void Update()
     {
-        rb.AddForce(transform.forward, ForceMode.Impulse);
         lifeTime -= Time.deltaTime;
         if (lifeTime <= 0) Destroy(this.gameObject);
     }
@@ -35,6 +34,12 @@ public class Bullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("Obstacle"))
+        {
+            Destroy(gameObject);
+            return;
+        }
+
         IDamageable damageable = other.gameObject.GetComponentInParent<IDamageable>();
         if (damageable == null)
         {

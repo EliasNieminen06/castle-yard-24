@@ -16,14 +16,15 @@ MonoBehaviour:
   type: 4
   operatorType: 0
   weight: 5
+  icon: {fileID: 0}
   commonValue: 0
   rareValue: 0.1
   epicValue: 0.2
   legendaryValue: 0.5
   commonValueString: 
-  rareValueString: 
-  epicValueString: 
-  legendaryValueString: 
+  rareValueString: Increase Magnet Range by 0.1
+  epicValueString: Increase Magnet Range by 0.2
+  legendaryValueString: Increase Magnet Range by 0.5
   commonWeight: 0
   rareWeight: 10
   epicWeight: 8

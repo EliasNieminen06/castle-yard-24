@@ -16,6 +16,7 @@ MonoBehaviour:
   type: 5
   operatorType: 0
   weight: 2
+  icon: {fileID: 0}
   commonValue: 0
   rareValue: 0
   epicValue: 0
@@ -23,7 +24,7 @@ MonoBehaviour:
   commonValueString: 
   rareValueString: 
   epicValueString: 
-  legendaryValueString: 1%
+  legendaryValueString: Reduce Cooldowns by  1%
   commonWeight: 0
   rareWeight: 0
   epicWeight: 0

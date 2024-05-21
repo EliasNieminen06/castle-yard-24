@@ -17,7 +17,7 @@ MonoBehaviour:
   operatorType: 1
   value: 1.2
   stackValue: 0.2
-  maxStacks: 3
+  maxStacks: 5
   weight: 50
   color: {r: 1, g: 0.495283, b: 0.8530179, a: 1}
   description: Increase Speed By 20%

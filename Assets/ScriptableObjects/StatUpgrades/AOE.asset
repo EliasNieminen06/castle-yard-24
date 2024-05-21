@@ -16,14 +16,15 @@ MonoBehaviour:
   type: 6
   operatorType: 0
   weight: 10
+  icon: {fileID: 0}
   commonValue: 0
   rareValue: 1
   epicValue: 2
   legendaryValue: 5
   commonValueString: 
-  rareValueString: 1%
-  epicValueString: 2%
-  legendaryValueString: 5%
+  rareValueString: Increase AOE by 1%
+  epicValueString: Increase AOE by 2%
+  legendaryValueString: Increase AOE by 5%
   commonWeight: 0
   rareWeight: 38
   epicWeight: 10

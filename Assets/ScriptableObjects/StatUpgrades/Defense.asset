@@ -16,14 +16,15 @@ MonoBehaviour:
   type: 2
   operatorType: 0
   weight: 23
+  icon: {fileID: 0}
   commonValue: 1
   rareValue: 2
   epicValue: 3
   legendaryValue: 5
-  commonValueString: 
-  rareValueString: 
-  epicValueString: 
-  legendaryValueString: 
+  commonValueString: Increase Defense by 1
+  rareValueString: Increase Defense by 2
+  epicValueString: Increase Defense by 3
+  legendaryValueString: Increase Defense by 5
   commonWeight: 50
   rareWeight: 38
   epicWeight: 10

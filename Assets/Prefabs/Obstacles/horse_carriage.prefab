@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6536444699895932882}
   - component: {fileID: 8979700097771858980}
-  m_Layer: 0
+  m_Layer: 13
   m_Name: BoxCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,6 +104,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 494779084079d4505bf98a8ca5fadf8c, type: 3}
       propertyPath: m_Name
       value: horse_carriage
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 494779084079d4505bf98a8ca5fadf8c, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 494779084079d4505bf98a8ca5fadf8c, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

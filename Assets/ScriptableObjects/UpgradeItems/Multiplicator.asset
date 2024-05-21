@@ -18,7 +18,7 @@ MonoBehaviour:
   value: 1
   stackValue: 0
   maxStacks: 2
-  weight: 10
+  weight: 15
   color: {r: 0.8113208, g: 0.8049425, b: 0.3329477, a: 1}
   description: Adds 1 Additional Projectile
   icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}

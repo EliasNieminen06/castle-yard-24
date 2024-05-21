@@ -201,6 +201,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats: {fileID: 11400000, guid: eb510e8d6012f43d2be9f9681963ca5f, type: 2}
   hpBarPrefab: {fileID: 0}
+  damageTextPopupPrefab: {fileID: 9166390352070905704, guid: 7ca08300a69f1c348b305a0665039543, type: 3}
   dropTable:
   - prefab: {fileID: 230164103564006873, guid: 395cb58c5046f490e9b0dc660edca6a2, type: 3}
     chance: 50
@@ -212,6 +213,7 @@ MonoBehaviour:
   attackPerLevel: 0.1
   defensePerLevel: 0
   speedPerLevel: 0.02
+  CDRPerLevel: 1
   isChest: 0
   agent: {fileID: -7912102101135423162}
 --- !u!195 &-7912102101135423162

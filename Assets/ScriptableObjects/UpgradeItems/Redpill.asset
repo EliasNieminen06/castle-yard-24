@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 50beabbfc3f1f49c39e2d4e3b54fde11, type: 3}
-  m_Name: StrengthPill
+  m_Name: Redpill
   m_EditorClassIdentifier: 
-  itemName: StrengthPill
+  itemName: Redpill
   type: 1
   operatorType: 1
-  value: 1.1
-  stackValue: 0.1
+  value: 1.2
+  stackValue: 0.2
   maxStacks: 5
-  weight: 100
-  color: {r: 0.26415092, g: 0.031149868, b: 0.031149868, a: 1}
-  description: Increase Attack by 10%
+  weight: 75
+  color: {r: 0.3679245, g: 0.036445353, b: 0.036445353, a: 1}
+  description: Increase Attack by 20%
   icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}

@@ -15,10 +15,10 @@ MonoBehaviour:
   itemName: Buckler
   type: 2
   operatorType: 0
-  value: 10
+  value: 15
   stackValue: 0
   maxStacks: 5
-  weight: 100
-  color: {r: 0.5, g: 0.3408019, b: 0.18160376, a: 1}
-  description: Increase Defense by 10
+  weight: 75
+  color: {r: 0.24528301, g: 0.14679149, b: 0.04512282, a: 1}
+  description: Increase Defense by 15
   icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}

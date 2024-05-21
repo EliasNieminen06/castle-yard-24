@@ -15,10 +15,10 @@ MonoBehaviour:
   itemName: Cloak
   type: 7
   operatorType: 0
-  value: 5
+  value: 10
   stackValue: 0
-  maxStacks: 10
+  maxStacks: 5
   weight: 25
   color: {r: 0.6766215, g: 0.4308473, b: 0.8867924, a: 1}
-  description: Increase Dodge Chance by 5%
+  description: Increase Dodge Chance by 10%
   icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}

@@ -16,14 +16,15 @@ MonoBehaviour:
   type: 8
   operatorType: 0
   weight: 10
+  icon: {fileID: 0}
   commonValue: 0
   rareValue: 2
   epicValue: 5
   legendaryValue: 10
   commonValueString: 
-  rareValueString: 2%
-  epicValueString: 5%
-  legendaryValueString: 10%
+  rareValueString: 'Increase EXP Gain by 2% '
+  epicValueString: Increase EXP Gain by 5%
+  legendaryValueString: Increase EXP Gain by 10%
   commonWeight: 0
   rareWeight: 38
   epicWeight: 8

@@ -3,10 +3,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine.AI;
+using TMPro;
 
 public class WaveSpawner : MonoBehaviour
 {
     public static WaveSpawner Instance;
+
+    [SerializeField] private TextMeshProUGUI waveCounterTMP;
 
     private void Awake()
     {
@@ -60,6 +63,8 @@ public class WaveSpawner : MonoBehaviour
     private void GenerateWave()
     {
         currentWave++;
+        waveCounterTMP.text = currentWave.ToString();
+
         int waveValue = currentWave * 3;
 
         if (currentWave < 4) waveValue += currentWave;
@@ -67,8 +72,16 @@ public class WaveSpawner : MonoBehaviour
         ReWriteEnemyDataDictionary();
         GenerateEnemies(waveValue);
 
-        spawnInterval = waveDuration / enemiesToSpawn.Count;
-        waveTimer = waveDuration;
+        if (currentWave < 3)
+        {
+            spawnInterval = waveDuration * 0.66f / enemiesToSpawn.Count;
+            waveTimer = waveDuration * 0.66f;
+        }
+        else
+        {
+            spawnInterval = waveDuration / enemiesToSpawn.Count;
+            waveTimer = waveDuration;
+        }
     }
 
     private void GenerateEnemies(int costLeft)
@@ -151,7 +164,7 @@ public class WaveSpawner : MonoBehaviour
 
         foreach (var enemy in enemySpawnPool)
         {
-            if (enemy.weight + enemy.weightAddedPerWave * currentWave <= 0)
+            if (enemy.weight + enemy.weightAddedPerWave * (currentWave - enemy.firstWave) <= 0)
             {
                 enemySpawnPool.Remove(enemy);
                 ReWriteEnemyDataDictionary();
@@ -159,7 +172,7 @@ public class WaveSpawner : MonoBehaviour
             }
 
             ValueTuple<int, int> tuple = (totalWeight, 0);
-            totalWeight += enemy.weight + enemy.weightAddedPerWave * currentWave;
+            totalWeight += enemy.weight + enemy.weightAddedPerWave * (currentWave - enemy.firstWave);
             tuple.Item2 = totalWeight;
             enemyDataDictionary.Add(enemy, tuple);
         }
@@ -169,7 +182,7 @@ public class WaveSpawner : MonoBehaviour
 
     private void SpawnEnemy(GameObject enemyPrefab)
     {
-        GameObject newEnemy = Instantiate(enemyPrefab, GetRandomSpawnPosition(), Quaternion.identity);
+        GameObject newEnemy = Instantiate(enemyPrefab, GetRandomSpawnPosition(), Quaternion.identity, transform);
     }
 
     private Vector3 GetRandomSpawnPosition()

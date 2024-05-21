@@ -52,6 +52,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: shop_n
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e93dcf697165d423894843999eefcf36, type: 3}
+      propertyPath: m_Layer
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e93dcf697165d423894843999eefcf36, type: 3}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

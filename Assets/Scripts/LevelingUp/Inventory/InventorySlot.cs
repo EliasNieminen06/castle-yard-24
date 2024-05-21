@@ -14,6 +14,7 @@ public class InventorySlot : MonoBehaviour
     {
         this.item = item;
         icon.sprite = item.icon;
+        icon.color = new Color(icon.color.r, icon.color.g, icon.color.b, 1);
     }
 
     public void UpdateSlot(Hero hero)

@@ -16,14 +16,15 @@ MonoBehaviour:
   type: 3
   operatorType: 0
   weight: 5
+  icon: {fileID: 0}
   commonValue: 0
   rareValue: 0
   epicValue: 0.2
   legendaryValue: 0.5
   commonValueString: 
   rareValueString: 
-  epicValueString: 
-  legendaryValueString: 
+  epicValueString: Increase Speed by 0.2
+  legendaryValueString: Increase Speed by 0.5
   commonWeight: 0
   rareWeight: 0
   epicWeight: 8

@@ -36,6 +36,7 @@ Transform:
   m_Children:
   - {fileID: 4020327668776701005}
   - {fileID: 1748571544416377633}
+  - {fileID: 7653290331872820915}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2168309851352011054
@@ -68,7 +69,8 @@ MonoBehaviour:
   mainCamera: {fileID: 0}
   aimLayerMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 256
+  cameraFollowPoint: {fileID: 7653290331872820915}
 --- !u!114 &4769830710431950849
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,8 +84,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseDamage: 0.1
-  arrowSpeed: 7.5
-  gunEnd: {fileID: 1748571544416377633}
+  arrowSpeed: 10
+  gunEnd: {fileID: 8109474950168109298}
   arrowPrefab: {fileID: 1213781688646122951, guid: c039cb456a53d43dfae98348c23e18ea, type: 3}
   baseAngleWithMultipleProjectiles: 15
   fireRate: 0.35
@@ -129,6 +131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats: {fileID: 11400000, guid: 4adafbb22ff864c3baee42e1cddf4522, type: 2}
   hpBarPrefab: {fileID: 1428100850086850590, guid: 5356f6202ffc04353a9cb868d3be800c, type: 3}
+  damageTextPopupPrefab: {fileID: 9166390352070905704, guid: 7ca08300a69f1c348b305a0665039543, type: 3}
   pickupLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -160,6 +163,37 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.775, z: 1.095}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2699028976185832583}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5719644803035881424
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7653290331872820915}
+  m_Layer: 6
+  m_Name: CameraFollowPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7653290331872820915
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5719644803035881424}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -362,3 +396,8 @@ CapsuleCollider:
   m_Height: 1.2
   m_Direction: 1
   m_Center: {x: 0, y: 0.58, z: 0}
+--- !u!4 &8109474950168109298 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -4554529779145798828, guid: d936a52147c0d4bd59a18257c0551055, type: 3}
+  m_PrefabInstance: {fileID: 3477249278569704358}
+  m_PrefabAsset: {fileID: 0}

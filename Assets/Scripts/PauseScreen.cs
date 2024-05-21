@@ -29,7 +29,8 @@ public class PauseScreen : MonoBehaviour
         paused = false;
         pauseScreen.SetActive(false);
         StatsAndHealthText.Hide_Static(0);
-        Time.timeScale = 1;
+        
+        if (!LevelUpScreen.active) Time.timeScale = 1;
     }
 
     public void Quit()

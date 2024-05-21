@@ -21,6 +21,13 @@ public class GhostEnemy : Enemy
 
     private void FixedUpdate()
     {
+        if (!agent.isOnNavMesh)
+        {
+            NavMeshHit hit;
+            NavMesh.SamplePosition(transform.position, out hit, 100, -1);
+            agent.Warp(hit.position);
+        }
+
         agent.SetDestination(player.position);
 
         //Vector3 direction = (player.position - transform.position).normalized;

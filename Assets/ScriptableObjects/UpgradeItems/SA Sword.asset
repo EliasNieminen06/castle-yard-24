@@ -18,7 +18,7 @@ MonoBehaviour:
   value: 6
   stackValue: 0
   maxStacks: 10
-  weight: 100
+  weight: 75
   color: {r: 0.8867924, g: 0.30535775, b: 0.34716034, a: 1}
   description: Increase Attack by 6
   icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}

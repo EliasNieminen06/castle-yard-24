@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using TMPro;
+using UnityEngine;
 
 public abstract class Unit : Entity, IDamageable
 {
@@ -9,8 +11,13 @@ public abstract class Unit : Entity, IDamageable
     [SerializeField] private GameObject hpBarPrefab;
     private HpBar hpBar;
 
+    private Vector3 originalScale;
+
+    [SerializeField] private GameObject damageTextPopupPrefab;
     public override void Init()
     {
+        originalScale = transform.localScale;
+
         Stats = new Stats(new StatsMediator(), baseStats);
         Health = new Health(baseStats, Stats);
 
@@ -87,19 +94,35 @@ public abstract class Unit : Entity, IDamageable
 
     public void TakeDamage(float damageAmount)
     {
+        Vector3 textPopupPosition = new Vector3(transform.position.x + Random.Range(-0.2f, 0.2f), transform.position.y + Mathf.Clamp(transform.localScale.y + 0.75f, 0, 4), transform.position.z + 0.5f);
+
         bool dodge = Random.Range(0, 100) < Stats.Dodge;
         if (dodge)
         {
-          //  Debug.Log(this + " Dodged");
+            GameObject newText1 = Instantiate(damageTextPopupPrefab, textPopupPosition, Quaternion.identity);
+            newText1.GetComponent<TextMeshPro>().text = "dodge";
+            //  Debug.Log(this + " Dodged");
             return;
         }
 
         float damageToTake = DamageCalculator.CalculateDamage(damageAmount, Stats.Defense);
         Health.ReduceHp(damageToTake);
 
+        StartCoroutine(SetScaleInSeconds(originalScale, 0.035f));
+        transform.localScale *= 1.1f;
+
+        GameObject newText = Instantiate(damageTextPopupPrefab, textPopupPosition, Quaternion.identity);
+        newText.GetComponent<TextMeshPro>().text = System.Math.Round(damageToTake, 1).ToString();
+
         //Debug.Log($"{this} Took {damageToTake} damage, Hp Left: {Health.currentHp}");
 
         if (Health.currentHp <= 0) OnDeath();
+
+        IEnumerator SetScaleInSeconds(Vector3 scale, float seconds)
+        {
+            yield return new WaitForSeconds(seconds);
+            transform.localScale = scale;
+        }
     }
 
     protected virtual void OnDeath() {

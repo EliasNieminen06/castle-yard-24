@@ -15,7 +15,7 @@ MonoBehaviour:
   maxHp: 3
   attack: 3
   defense: 0
-  speed: 3
+  speed: 2.25
   magnet: 0
   cooldownReduction: 0
   areaOfEffect: 0

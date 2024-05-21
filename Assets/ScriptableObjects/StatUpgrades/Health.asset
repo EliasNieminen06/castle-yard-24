@@ -16,14 +16,15 @@ MonoBehaviour:
   type: 0
   operatorType: 0
   weight: 18
+  icon: {fileID: 0}
   commonValue: 2
   rareValue: 3
   epicValue: 5
   legendaryValue: 10
-  commonValueString: 
-  rareValueString: 
-  epicValueString: 
-  legendaryValueString: 
+  commonValueString: Increase HP by 2
+  rareValueString: Increase HP by 3
+  epicValueString: Increase HP by 5
+  legendaryValueString: Increase HP by 10
   commonWeight: 50
   rareWeight: 38
   epicWeight: 10

@@ -12,7 +12,7 @@ public class StatUpgradeOption : MonoBehaviour
 
     private float ableToApplyTime;
 
-    public void SetUpgrade(Hero hero, StatModifierConfig modifierConfig, Color backgroundColor, bool showStatInsteadOfName, float ableToApplyTime, System.Action<int> OnApply)
+    public void SetUpgrade(Hero hero, StatModifierConfig modifierConfig, Color upgradeColor, bool showStatInsteadOfName, float ableToApplyTime, System.Action<int> OnApply)
     {
         gameObject.SetActive(true);
 
@@ -22,7 +22,10 @@ public class StatUpgradeOption : MonoBehaviour
         if (showStatInsteadOfName) upgradeNameTMP.text = modifierConfig.type.ToString();
         else upgradeNameTMP.text = modifierConfig.name;
 
-        upgradeLevelTMP.text = $"Lv: {hero.Stats.Mediator.GetModifierStacks(modifierConfig.name) + 1} / {modifierConfig.maxStacks}";
+        upgradeNameTMP.color = upgradeColor;
+
+        if (showStatInsteadOfName) upgradeLevelTMP.text = $"Lv: {hero.Stats.Mediator.GetModifierStacks(modifierConfig.name) + 1}";
+        else upgradeLevelTMP.text = $"Lv: {hero.Stats.Mediator.GetModifierStacks(modifierConfig.name) + 1} / {modifierConfig.maxStacks}";
         upgradeDescriptionTMP.text = modifierConfig.description;
 
         icon.sprite = modifierConfig.icon;

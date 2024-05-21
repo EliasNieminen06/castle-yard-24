@@ -7,6 +7,8 @@ public class LevelUpScreen : MonoBehaviour
 {
     private static LevelUpScreen instance;
 
+    public static bool active { get; private set; }
+
     [SerializeField] ItemInventory inventory;
 
     //[SerializeField] private List<BaseStatModifier> statModifiers;
@@ -61,11 +63,13 @@ public class LevelUpScreen : MonoBehaviour
 
         this.OnHide = OnHide;
 
+        active = true;
         Time.timeScale = 0f;
     }
 
     private void Hide()
     {
+        active = false;
         Time.timeScale = 1f;
         gameObject.SetActive(false);
         OnHide.Invoke();

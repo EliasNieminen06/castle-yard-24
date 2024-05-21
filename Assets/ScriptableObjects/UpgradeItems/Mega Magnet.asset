@@ -18,7 +18,7 @@ MonoBehaviour:
   value: 2
   stackValue: 1
   maxStacks: 5
-  weight: 75
+  weight: 50
   color: {r: 0.3537736, g: 0.488745, b: 1, a: 1}
-  description: Icrease Magnet Range by 100%
+  description: Increase Magnet Range by 100%
   icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}

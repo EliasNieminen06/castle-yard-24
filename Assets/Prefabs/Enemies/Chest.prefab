@@ -193,6 +193,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseStats: {fileID: 11400000, guid: 97d41fefd89e74792bad9a9f9acaae9d, type: 2}
   hpBarPrefab: {fileID: 1428100850086850590, guid: 5356f6202ffc04353a9cb868d3be800c, type: 3}
+  damageTextPopupPrefab: {fileID: 9166390352070905704, guid: 7ca08300a69f1c348b305a0665039543, type: 3}
   dropTable:
   - prefab: {fileID: 230164103564006873, guid: 9976157f80e1c41deb4a9a8043722593, type: 3}
     chance: 100

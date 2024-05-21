@@ -12,7 +12,6 @@ public class ExpPickup : Pickup
     [SerializeField] private float hugeSize = 0.8f;
 
     [Header("Breakpoints")]
-    [SerializeField] private float tiny = 2f;
     [SerializeField] private float small = 5f;
     [SerializeField] private float medium = 10f;
     [SerializeField] private float large = 20f;

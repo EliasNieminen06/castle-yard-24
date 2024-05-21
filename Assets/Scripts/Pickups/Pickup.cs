@@ -38,7 +38,10 @@ public abstract class Pickup : Entity, IVisitor
     public void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("Ground")) rb.drag = 10f;
+    }
 
+    public void OnTriggerStay(Collider other)
+    {
         other.GetComponentInParent<IVisitable>()?.Accept(this);
     }
 

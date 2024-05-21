@@ -15,10 +15,10 @@ MonoBehaviour:
   itemName: XXL Burger
   type: 0
   operatorType: 1
-  value: 1.1
-  stackValue: 0.1
+  value: 1.2
+  stackValue: 0.2
   maxStacks: 5
-  weight: 100
-  color: {r: 0.5377358, g: 0.23609596, b: 0.1445799, a: 1}
-  description: Increase HP by 10%
+  weight: 75
+  color: {r: 0.4056604, g: 0.17315476, b: 0.07079922, a: 1}
+  description: Increase HP by 20%
   icon: {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
